@@ -1,1 +1,106 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: 'Montserrat';
+  src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
+  src: url("/fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-dr-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-menu {
+  width: calc( 100% - 117px);
+  margin: 57px auto 0;
+}
+
+.container-menu .navbar {
+  margin-left: 50px;
+}
+
+.container-body {
+  width: calc( 100% - 192px);
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 900;
+  max-width: 776px;
+  line-height: 70px;
+  margin-bottom: 31px;
+  font-family: 'Montserrat-Bold', sans-serif;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 300;
+  max-width: 418px;
+  margin-bottom: 66px;
+  font-family: 'Montserrat-Light', sans-serif;
+}
+
+a.btn-contact-us {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background: linear-gradient(278.53deg, #10157D 12.65%, #EB0089 95.96%);
+  color: #fff;
+  font-size: 24px;
+  padding: 12px 31px;
+  border-radius: 100px;
+}
+
+a.btn-contact-us .btn-gradient {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(278.53deg, #EB0089 12.65%, #10157D 95.96%);
+  -webkit-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+  border-radius: 100px;
+}
+
+a.btn-contact-us:hover .btn-gradient {
+  opacity: 1;
+}
+
+.menu-fixed {
+  position: fixed;
+}
+
+.menu-fixed .navbar-toggler {
+  margin: 8px;
+}
+
+.menu-fixed .navbar-toggler .navbar-toggler-icon {
+  width: 15px;
+  left: 53px;
+  top: 66px;
+  border: 2px solid #000000;
+}
+/*# sourceMappingURL=style.css.map */

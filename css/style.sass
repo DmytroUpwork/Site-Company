@@ -17,19 +17,27 @@
 
 .container-menu
   width: calc( 100% - 117px )
-  margin: 57px auto 0
+  margin: 57px auto 128px
   .navbar 
     margin-left: 50px
     .collapse 
       .navbar-nav 
         .nav-item 
+          margin-right: 32px
+          .nav-link
+            font-size: 18px
 
 .container-body 
-  width: calc( 100% - 192px )
+  width: calc( 100% - 285px )
   margin: 0 auto
+
+  
 
 body 
   font-family: 'Montserrat', sans-serif
+  position: relative
+  overflow: hidden
+  
 h1 
   font-size: 64px
   font-weight: 900
@@ -49,16 +57,22 @@ h3
 
 .subtitle-home 
 
-// .btn-contact-us 
-//   background: linear-gradient(278.53deg, #10157D 12.65%, #EB0089 95.96%)
-//   color: #fff
-//   font-size: 24px
-//   border: none
-//   padding: 12px 31px
-//   border-radius: 100px
-//   transition: .2s
-//   &:hover 
-//     background: linear-gradient(278.53deg, #EB0089 12.65%, #10157D 95.96%)
+.blue-circle-home
+  position: absolute
+  width: 845px
+  height: 845px
+  border-radius: 50%
+  right: -178px
+  top: -306px
+  background: #10157D
+  box-shadow: 8px 10px 40px rgba(16, 21, 125, 0.2)
+  z-index: -2
+.img-smoke-home
+  position: absolute
+  right: -5px
+  top: -7px
+  z-index: -1 
+
 
 a.btn-contact-us 
   position: relative
@@ -83,6 +97,36 @@ a.btn-contact-us
   &:hover .btn-gradient
     opacity: 1
 
+.phone-link
+  a.phone-link__tel 
+    color: #fff
+    font-size: 24px
+    margin-right: 61px
+  a.phone-link__btn 
+    position: relative
+    z-index: 1
+    display: inline-block
+    border: 2px solid #EB0089
+    color: #EB0089
+    font-size: 18px
+    padding: 12px 31px
+    border-radius: 100px
+    transition: .2s
+    .btn-fone 
+      position: absolute
+      z-index: -1
+      top: -2px
+      left: -1px
+      width: 101%
+      height: 108%
+      opacity: 0
+      background: #EB0089
+      transition: opacity .2s linear
+      border-radius: 100px
+    &:hover
+      color: #fff
+      .btn-fone 
+        opacity: 1
     
 
 
@@ -91,8 +135,13 @@ a.btn-contact-us
   
 .menu-fixed
   position: fixed 
+  top: 49px
+  left: 28px
+  .block-sprite 
+    .icon
+      margin-bottom: 33px
   .navbar-toggler 
-    margin: 8px
+    margin: 8px 8px 149px 8px
     .navbar-toggler-icon 
       width: 15px
       left: 53px

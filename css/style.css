@@ -40,6 +40,12 @@
 
 .container-menu .navbar .collapse .navbar-nav .nav-item .nav-link {
   font-size: 18px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.container-menu .navbar .collapse .navbar-nav .nav-item .nav-link:hover {
+  color: #EB0089;
 }
 
 .container-body {
@@ -123,6 +129,12 @@ a.btn-contact-us:hover .btn-gradient {
   color: #fff;
   font-size: 24px;
   margin-right: 61px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.phone-link a.phone-link__tel:hover {
+  color: #EB0089;
 }
 
 .phone-link a.phone-link__btn {

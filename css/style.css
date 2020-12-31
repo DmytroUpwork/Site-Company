@@ -28,6 +28,13 @@
 .container-menu {
   width: calc( 100% - 117px);
   margin: 57px auto 128px;
+  position: relative;
+}
+
+.container-menu .decor-1 {
+  position: absolute;
+  bottom: -28px;
+  left: 357px;
 }
 
 .container-menu .navbar {
@@ -42,6 +49,7 @@
   font-size: 18px;
   -webkit-transition: .2s;
   transition: .2s;
+  color: #000;
 }
 
 .container-menu .navbar .collapse .navbar-nav .nav-item .nav-link:hover {
@@ -51,6 +59,18 @@
 .container-body {
   width: calc( 100% - 285px);
   margin: 0 auto;
+}
+
+.container-body:before {
+  content: ' ';
+  position: absolute;
+  width: 814px;
+  height: 814px;
+  left: -310px;
+  top: 430px;
+  border: 1px solid rgba(16, 21, 125, 0.3);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 body {
@@ -84,8 +104,8 @@ h3 {
   right: -178px;
   top: -306px;
   background: #10157D;
-  -webkit-box-shadow: 8px 10px 40px rgba(16, 21, 125, 0.2);
-          box-shadow: 8px 10px 40px rgba(16, 21, 125, 0.2);
+  -webkit-box-shadow: 8px 10px 40px rgba(16, 21, 125, 0.3);
+          box-shadow: 8px 10px 40px rgba(16, 21, 125, 0.3);
   z-index: -2;
 }
 
@@ -176,6 +196,20 @@ a.btn-contact-us:hover .btn-gradient {
   position: fixed;
   top: 54px;
   left: 28px;
+  bottom: 61px;
+}
+
+.menu-fixed:before {
+  content: ' ';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #000;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  bottom: 0;
+  left: -5px;
 }
 
 .menu-fixed .block-sprite .icon {
@@ -190,11 +224,19 @@ a.btn-contact-us:hover .btn-gradient {
   height: 13px;
 }
 
+.menu-fixed .navbar-toggler:hover .navbar-toggler-icon,
+.menu-fixed .navbar-toggler:hover .navbar-toggler-icon:before,
+.menu-fixed .navbar-toggler:hover .navbar-toggler-icon:after {
+  background: #EB0089;
+}
+
 .menu-fixed .navbar-toggler .navbar-toggler-icon {
   width: 15px;
   height: 2px;
   display: block;
   background: #000;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .menu-fixed .navbar-toggler .navbar-toggler-icon:before, .menu-fixed .navbar-toggler .navbar-toggler-icon:after {
@@ -204,6 +246,8 @@ a.btn-contact-us:hover .btn-gradient {
   display: block;
   background: #000;
   position: absolute;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .menu-fixed .navbar-toggler .navbar-toggler-icon:before {

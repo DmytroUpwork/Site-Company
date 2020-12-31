@@ -1,3 +1,12 @@
+$color-black: #000
+$color-white: #fff
+$color-blue: #10157D
+$color-blue-shadow: rgba(16, 21, 125, 0.3)
+$color-pink: #EB0089
+  
+  
+  
+  
 @font-face
   font-family: 'Montserrat'
   src: url('/fonts/Montserrat-Bold.ttf') format('truetype')
@@ -11,9 +20,16 @@
   justify-content: space-between
 .flex-dr-col 
   flex-direction: column
+// Меню верхнее ====================
 .container-menu
   width: calc( 100% - 117px )
   margin: 57px auto 128px
+  position: relative
+  .decor-1 
+    position: absolute
+    bottom: -28px
+    left: 357px
+
   .navbar 
     margin-left: 50px
     .collapse 
@@ -23,13 +39,23 @@
           .nav-link
             font-size: 18px
             transition: .2s
-            color: #000
+            color: $color-black
             &:hover 
-              color: #EB0089
+              color: $color-pink
 
 .container-body 
   width: calc( 100% - 285px )
   margin: 0 auto
+  &:before 
+    content: ' '
+    position: absolute
+    width: 814px
+    height: 814px
+    left: -310px
+    top: 430px
+    border: 1px solid $color-blue-shadow
+    border-radius: 50%
+    z-index: -1
 body 
   font-family: 'Montserrat', sans-serif
   position: relative
@@ -56,8 +82,8 @@ h3
   border-radius: 50%
   right: -178px
   top: -306px
-  background: #10157D
-  box-shadow: 8px 10px 40px rgba(16, 21, 125, 0.2)
+  background: $color-blue
+  box-shadow: 8px 10px 40px $color-blue-shadow
   z-index: -2
 .img-smoke-home
   position: absolute
@@ -70,8 +96,8 @@ a.btn-contact-us
   position: relative
   z-index: 1
   display: inline-block
-  background: linear-gradient(278.53deg, #10157D 12.65%, #EB0089 95.96%)
-  color: #fff
+  background: linear-gradient(278.53deg, $color-blue 12.65%, $color-pink 95.96%)
+  color: $color-white
   font-size: 24px
   padding: 12px 31px
   border-radius: 100px
@@ -83,25 +109,25 @@ a.btn-contact-us
     width: 100%
     height: 100%
     opacity: 0
-    background: linear-gradient(278.53deg, #EB0089 12.65%, #10157D 95.96%)
+    background: linear-gradient(278.53deg, $color-pink 12.65%, $color-blue 95.96%)
     transition: opacity .2s linear
     border-radius: 100px
   &:hover .btn-gradient
     opacity: 1
 .phone-link
   a.phone-link__tel 
-    color: #fff
+    color: $color-white
     font-size: 24px
     margin-right: 61px
     transition: .2s
     &:hover 
-      color: #EB0089
+      color: $color-pink
   a.phone-link__btn 
     position: relative
     z-index: 1
     display: inline-block
-    border: 2px solid #EB0089
-    color: #EB0089
+    border: 2px solid $color-pink
+    color: $color-pink
     font-size: 18px
     padding: 12px 31px
     border-radius: 100px
@@ -114,11 +140,11 @@ a.btn-contact-us
       width: 101%
       height: 108%
       opacity: 0
-      background: #EB0089
+      background: $color-pink
       transition: opacity .2s linear
       border-radius: 100px
     &:hover
-      color: #fff
+      color: $color-white
       .btn-fone 
         opacity: 1
 // Боковое меню фиксированное ===========
@@ -126,6 +152,17 @@ a.btn-contact-us
   position: fixed 
   top: 54px
   left: 28px
+  bottom: 61px
+  &:before 
+    content: ' '
+    display: block
+    width: 40px
+    height: 1px
+    background: $color-black
+    transform: rotate(90deg)
+    position: absolute
+    bottom: 0
+    left: -5px
   .block-sprite 
     .icon
       margin-bottom: 33px
@@ -135,19 +172,25 @@ a.btn-contact-us
     background: transparent
     position: relative
     height: 13px
+    &:hover .navbar-toggler-icon,
+    &:hover .navbar-toggler-icon:before,
+    &:hover .navbar-toggler-icon:after,
+      background: $color-pink
     .navbar-toggler-icon 
       width: 15px
       height: 2px
       display: block
-      background: #000
+      background: $color-black
+      transition: .2s
       &:before,
       &:after 
         content: ' '
         width: 15px
         height: 2px
         display: block
-        background: #000
+        background: $color-black
         position: absolute
+        transition: .2s
       &:before 
         top: 0
       &:after 

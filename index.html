@@ -14,18 +14,16 @@
   </head>
   <body>
 
-    
+    <!--НАЧАЛО: Элементы декора ==================== -->
     <img src="img/group-smoke.png" alt="" class="img-smoke-home">
-  
+    <div class="blue-circle blue-circle-home"></div>
+    <!--КОНЕЦ: Элементы декора ==================== -->
     
-
-    <div class="blue-circle-home"></div>
-    
-
+    <!--НАЧАЛО: Шапка сайта ==================== -->
     <header>
       <div class="container-menu">
         <img src="./img/decor-1.png" alt="decor" class="decor-1">
-        <nav class="navbar d-flex jc-sb">
+        <nav class="navbar d-flex jc-space-between">
           <div class="collapse">
             <ul class="navbar-nav d-flex">
               <li class="nav-item active">
@@ -49,7 +47,9 @@
         </nav>
       </div>
     </header>
+    <!--КОНЕЦ: Шапка сайта ==================== -->
 
+    <!--НАЧАЛО: Фиксированное боковое меню ==================== -->
     <div class="menu-fixed">
       <button class="navbar-toggler">
         <span class="navbar-toggler-icon"></span>
@@ -73,6 +73,7 @@
       </div>
       <div class="decor-line"></div>
     </div>
+    <!--КОНЕЦ: Фиксированное боковое меню ==================== -->
 
     <div class="container-body">
       <h1 class="title-home"> Сайты с разрывом шаблонов </h1>
@@ -80,51 +81,46 @@
       <a href="#!" class="btn btn-contact-us"><span class="btn-gradient"></span> Связаться с нами </a>
     </div>
 
-    <div class="container-card">
-      <h2 class="block-card">
-        Мы сделаем для вас
-      </h2>
-
-      <div class="row-col-3 d-flex">
-        <div class="card">
-          
+    <!--НАЧАЛО: Секция услуги, карточки ==================== -->
+    <section class="sec-services">
+      <div class="container-card">
+        <h2 class="block-card">
+          Мы сделаем для вас
+        </h2>
+        <!--НАЧАЛО: Элементы декора ==================== -->
+        <div class="tool_triangle tool_triangle-1"></div>
+        <div class="tool_triangle tool_triangle-2"></div>
+        <div class="tool_triangle tool_triangle-3"></div>
+        <div class="tool_triangle tool_triangle-4"></div>
+        <!--КОНЕЦ: Элементы декора ================================ -->
+        <div class="row-col-3 d-flex">
+          <div class="card card-services">
             <div class="card-header">
-              <svg class="icon-card">
+              <svg class="icon-card icon-card-services">
                 <use xlink:href="img/sprite-card.svg#img-card-design"></use>
               </svg>
             </div>
-          
             <div class="card-content">
               <h4>Веб-дизайн сайта</h4>
               <p>Веб-дизайн который выделит вас среди конкурентов</p>
               <a href="#!">Смотреть</a>
             </div>
-          
-          
-          
-        </div>
-        <div class="card">
-          
+          </div>
+          <div class="card card-services">
             <div class="card-header">
-              <svg class="icon-card">
+              <svg class="icon-card icon-card-services">
                 <use xlink:href="img/sprite-card.svg#img-card-verstka"></use>
               </svg>
             </div>
-
             <div class="card-content">
               <h4>Вёрстку сайта</h4>
               <p>Адаптивный сайт, контент которого не будет ломаться </p>
               <a href="#!">Смотреть</a>
             </div>
-         
-          
-          
-          
-        </div>
-        <div class="card">
-         
+          </div>
+          <div class="card card-services">
             <div class="card-header">
-              <svg class="icon-card">
+              <svg class="icon-card icon-card-services">
                 <use xlink:href="img/sprite-card.svg#img-card-cms"></use>
               </svg>
             </div>
@@ -133,17 +129,12 @@
               <p> Вносите изменения на свой сайт без помощи специалиста</p>
               <a href="#!">Смотреть</a>
             </div>
-        
-          
-          
+          </div>
         </div>
-      </div>
-
-      <div class="row-col-2 d-flex">
-        <div class="card">
-          
+        <div class="row-col-2 d-flex jc-center">
+          <div class="card card-services">
             <div class="card-header">
-              <svg class="icon-card">
+              <svg class="icon-card icon-card-services">
                 <use xlink:href="img/sprite-card.svg#img-card-server"></use>
               </svg>
             </div>
@@ -152,14 +143,10 @@
               <p>Подключаем доменное имя, и переносим сайт на хостинг</p>
               <a href="#!">Смотреть</a>
             </div>
-        
-          
-          
-        </div>
-        <div class="card">
-        
+          </div>
+          <div class="card card-services">
             <div class="card-header">
-              <svg class="icon-card">
+              <svg class="icon-card icon-card-services">
                 <use xlink:href="img/sprite-card.svg#img-card-logo"></use>
               </svg>
             </div>
@@ -168,12 +155,53 @@
               <p>Разработаем уникальный дизайн для вашего логотипа</p>
               <a href="#!">Смотреть</a>
             </div>
-    
-          
-          
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+    <!--КОНЕЦ: Секция услуги, карточки ==================== -->
+    
+
+    <!--НАЧАЛО: Секция гарантии ==================== -->
+    <section class="sec-voucher">
+      <div class="blue-circle blue-circle-voucher"></div>
+      <div class="container-card">
+        <h2 class="block-card">Мы гарантируем</h2>
+      </div>
+      <div class="container-voucher">
+        <div class="row-col-3 d-flex jc-flex-end">
+          <div class="card card-voucher">
+            <div class="card-header">
+              <img src="./img/XMLID-1.png" alt="">
+            </div>
+            <div class="card-content">
+              <h4>Выполнение дедлайна</h4>
+              <p>Наша команда ценит ваше время, поэтому выполняет проект вовремя. </p>
+            </div>
+          </div>
+          <div class="card card-voucher">
+            <div class="card-header">
+              <img src="./img/XMLID-2.png" alt="">
+            </div>
+            <div class="card-content">
+              <h4>Современность и оригинальность</h4>
+              <p>Каждый проект выполняется с читого листа. Благодаря этому, ваш сайт будет узнаваем и приятен для вашего клиента.</p>
+            </div>
+          </div>
+          <div class="card card-voucher">
+            <div class="card-header">
+              <img src="./img/XMLID-3.png" alt="">
+            </div>
+            <div class="card-content">
+              <h4>Работу на совесть</h4>
+              <p>И самое важное для вас и нашей команды в том числе, это то, что ваш проект выполнится качественно.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--КОНЕЦ: Секция гарантии ==================== -->
 
  
 

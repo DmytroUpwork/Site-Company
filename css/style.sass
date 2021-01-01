@@ -3,29 +3,52 @@ $color-white: #fff
 $color-blue: #10157D
 $color-blue-shadow: rgba(16, 21, 125, 0.3)
 $color-pink: #EB0089
-  
-  
-  
-  
 @font-face
   font-family: 'Montserrat'
   src: url('../fonts/Montserrat-Bold.ttf') format('truetype')
   src: url('../fonts/Montserrat-Light.ttf') format('truetype')
   font-weight: normal
   font-style: normal
-
 =d-flex-sb-column
   display: flex
   justify-content: space-between
   flex-direction: column
-
+body 
+  font-family: 'Montserrat', sans-serif
+  position: relative
+  overflow: hidden  
+  background: $color-white
+h1 
+  font-size: 64px
+  font-weight: 900
+  max-width: 776px
+  line-height: 78px
+  margin-bottom: 48px
+  font-family: 'Montserrat-Bold', sans-serif
+h2 
+  font-weight: 900
+  font-size: 48px
+  font-family: 'Montserrat-Bold', sans-serif
+h3 
+  font-size: 36px
+  font-weight: 300
+  max-width: 418px
+  margin-bottom: 90px
+  font-family: 'Montserrat-Light', sans-serif
 .d-flex 
   display: flex
-.jc-sb
+.jc-center 
+  justify-content: center
+.jc-flex-end 
+  justify-content: flex-end
+.jc-space-between
   justify-content: space-between
 .flex-dr-col 
   flex-direction: column
-// Меню верхнее ====================
+.block-card
+  margin: 0 0 123px 56px
+
+//НАЧАЛО: Меню верхнее ====================
 .container-menu
   width: calc( 100% - 117px )
   margin: 57px auto 173px
@@ -34,7 +57,6 @@ $color-pink: #EB0089
     position: absolute
     bottom: -28px
     left: 357px
-
   .navbar 
     margin-left: 50px
     .collapse 
@@ -48,7 +70,72 @@ $color-pink: #EB0089
             font-weight: 600
             &:hover 
               color: $color-pink
+//КОНЕЦ: Меню верхнее ====================
 
+//НАЧАЛО: Боковое меню фиксированное ===========
+.menu-fixed
+  position: fixed 
+  top: 54px
+  left: 28px
+  bottom: 61px
+  display: flex;
+  flex-direction: column
+  justify-content: space-between
+  z-index: 99999
+  .decor-line 
+    display: block
+    width: 40px
+    height: 1px
+    background: $color-black
+    transform: rotate(90deg)
+  .block-sprite 
+    .icon
+      margin-bottom: 33px
+  .navbar-toggler 
+    margin: 8px 8px 0 8px
+    border: none
+    background: transparent
+    position: relative
+    height: 13px
+    &:hover .navbar-toggler-icon,
+    &:hover .navbar-toggler-icon:before,
+    &:hover .navbar-toggler-icon:after,
+      background: $color-pink
+    &:hover .navbar-toggler-icon.active-color,
+    &:hover .navbar-toggler-icon.active-color:before,
+    &:hover .navbar-toggler-icon.active-color:after,
+      background:  #81eb00!important
+    .navbar-toggler-icon 
+      width: 15px
+      height: 2px
+      display: block
+      background: $color-black
+      transition: .2s
+      &:before,
+      &:after 
+        content: ' '
+        width: 15px
+        height: 2px
+        display: block
+        background: $color-black
+        position: absolute
+        transition: .2s
+      &:before 
+        top: 0
+      &:after 
+        bottom: 0
+    .navbar-toggler-icon.active-color
+      &:before,
+      &:after 
+        background: $color-pink
+.active-color-svg 
+  fill: $color-pink
+.active-color 
+  background: $color-pink!important
+
+//КОНЕЦ: Боковое меню фиксированное ===========
+
+// НАЧАЛО: Стили контейнеров =============
 .container-body 
   width: calc( 100% - 285px )
   margin: 0 auto
@@ -70,46 +157,39 @@ $color-pink: #EB0089
     left: 118px
     top: 820px
     background: rgba(235, 0, 137, 0.3)
-body 
-  font-family: 'Montserrat', sans-serif
+.container-card 
+  width: calc( 100% - 204px )
+  margin: 0 auto
   position: relative
-  overflow: hidden  
-h1 
-  font-size: 64px
-  font-weight: 900
-  max-width: 776px
-  line-height: 78px
-  margin-bottom: 48px
-  font-family: 'Montserrat-Bold', sans-serif
-h2 
-  font-weight: 900
-  font-size: 48px
-  font-family: 'Montserrat-Bold', sans-serif
-h3 
-  font-size: 36px
-  font-weight: 300
-  max-width: 418px
-  margin-bottom: 90px
-  font-family: 'Montserrat-Light', sans-serif
+.container-voucher 
+  width: calc( 100% - 116px )
+  margin: 0 auto
+// КОНЕЦ: Стили контейнеров =============
 
 // Картинки на главной ====================
-.blue-circle-home
+.blue-circle
   position: absolute
+  border-radius: 50%
+  background: $color-blue
+  z-index: -2
+.blue-circle-home
   width: 804px
   height: 804px
-  border-radius: 50%
   right: -178px
   top: -246px
-  background: $color-blue
   box-shadow: 8px 10px 40px $color-blue-shadow
-  z-index: -2
+.blue-circle-voucher 
+  width: 568px
+  height: 568px
+  left: -268px
+  top: 242px
 .img-smoke-home
   position: absolute
   right: -34px
   top: 0
   z-index: -1 
 
-// Ссылки-кнопки ======================
+//НАЧАЛО: Ссылки-кнопки ======================
 a.btn-contact-us 
   position: relative
   z-index: 1
@@ -120,7 +200,6 @@ a.btn-contact-us
   font-size: 24px
   padding: 16px 36px
   border-radius: 100px
-  margin-bottom: 300px
   .btn-gradient 
     position: absolute
     z-index: -1
@@ -168,102 +247,49 @@ a.btn-contact-us
       color: $color-white
       .btn-fone 
         opacity: 1
-// Боковое меню фиксированное ===========
-.menu-fixed
-  position: fixed 
-  top: 54px
-  left: 28px
-  bottom: 61px
-  display: flex;
-  flex-direction: column
-  justify-content: space-between
-  .decor-line 
-    display: block
-    width: 40px
-    height: 1px
-    background: $color-black
-    transform: rotate(90deg)
-  .block-sprite 
-    .icon
-      margin-bottom: 33px
-  .navbar-toggler 
-    margin: 8px 8px 0 8px
-    border: none
-    background: transparent
-    position: relative
-    height: 13px
-    &:hover .navbar-toggler-icon,
-    &:hover .navbar-toggler-icon:before,
-    &:hover .navbar-toggler-icon:after,
-      background: $color-pink
-    .navbar-toggler-icon 
-      width: 15px
-      height: 2px
-      display: block
-      background: $color-black
-      transition: .2s
-      &:before,
-      &:after 
-        content: ' '
-        width: 15px
-        height: 2px
-        display: block
-        background: $color-black
-        position: absolute
-        transition: .2s
-      &:before 
-        top: 0
-      &:after 
-        bottom: 0
+//КОНЕЦ: Ссылки-кнопки ======================
 
-// Секция "Мы сделаем для Вас" ===================
-.container-card 
-  width: calc( 100% - 204px )
-  margin: 0 auto
-h2.block-card
-  margin: 0 0 123px 56px
-.row-col-2
-  justify-content: center
-
-// Карточки =====================
+//НАЧАЛО: Карточки =====================
 .card 
   width: 27%
+  transition: .3s
+  .card-header 
+    margin-bottom: 20px
+    text-align: center
+  .card-content
+    h4 
+      font-family: 'Montserrat-Bold', sans-serif
+      font-weight: 900
+      margin-bottom: 16px
+    p 
+      font-family: 'Montserrat-Light', sans-serif
+      margin-bottom: 30px
+
+.card-services
   text-align: center
   padding: 40px 33px 17px
   box-shadow: 9px 12px 40px #93C0D1
   border-radius: 50px
   margin: 0 46px 42px
   background: $color-white
-  transition: .3s
   &:hover
     background: $color-blue
-  &:hover .icon-card
+  &:hover .icon-card-services
     fill: $color-white
   &:hover .card-content h4 
     color: $color-pink
   &:hover p 
     color: $color-white
-
-  .card-header 
-    margin-bottom: 20px
-     
-
   .card-content
     +d-flex-sb-column
-    height: calc(100% - 175px);
+    height: calc(100% - 175px)
     h4 
-      color: $color-blue
-      font-weight: 900
+      color: $color-blue   
       font-size: 24px
-      font-family: 'Montserrat-Bold', sans-serif
-      margin-bottom: 16px
       min-height: 63px
     p 
       font-size: 22px
-      font-family: 'Montserrat-Light', sans-serif
-      margin-bottom: 30px
       min-height: 80px
-
     a 
       background: $color-pink
       font-family: 'Montserrat-Bold', sans-serif
@@ -277,5 +303,72 @@ h2.block-card
         background: $color-white
         color: $color-black
         box-shadow: 4px 7px 20px rgba(255, 255, 255, 0.4)
+.card-voucher 
+  .card-content
+    font-size: 18px
+//КОНЕЦ: Карточки =====================
+
+//НАЧАЛО: Секция "Услуги" ===================
+.sec-services
+  padding: 300px 0 150px 
+.tool_triangle 
+  position: absolute 
+.tool_triangle-1 
+  width: 0
+  height: 0
+  border-left: 38px solid transparent
+  border-right: 19px solid transparent
+  border-bottom: 36px solid $color-pink
+  transform: rotate(-23deg) 
+  top: 125px
+  right: 31%
+.tool_triangle-2,
+.tool_triangle-3
+  width: 101px
+  height: 102px
+  overflow: hidden
+  box-shadow: 0 16px 9px -17px  rgba(147, 192, 209, 0.7)
+  &:after 
+    content: ""
+    position: absolute
+    width: 50px
+    height: 50px
+    background: $color-white
+.tool_triangle-2  
+  transform: rotate(-54deg)
+  left: -88px
+  top: 350px
+  &:after   
+    transform: rotate(50deg)
+    top: 79px
+    left: 28px
+    box-shadow: -9px -6px 27px -2px  rgba(147, 192, 209, 0.7)
+.tool_triangle-3
+  transform: rotate(40deg)
+  right: 24px
+  bottom: 270px
+  &:after   
+    transform: rotate(50deg)
+    top: 79px
+    left: 28px
+    box-shadow: -9px -6px 27px -2px  rgba(147, 192, 209, 0.7)
+.tool_triangle-4
+  width: 0
+  height: 0
+  border-left: 9px solid transparent
+  border-right: 0px solid transparent
+  border-bottom: 34px solid #050505
+  transform: rotate(115deg)
+  right: 109px
+  bottom: 255px
+//КОНЕЦ: Секция "Услуги" ===================
+
+//НАЧАЛО: Секция "Гарантии" ===================
+.sec-voucher 
+  padding: 0 0 1106px
+  position: relative
+  .container-card 
+    margin-bottom: 95px
+//КОНЕЦ: Секция "Гарантии" ===================
 
 

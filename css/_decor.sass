@@ -1,0 +1,88 @@
+.tool_triangle 
+  position: absolute 
+.tool_triangle-1 
+  width: 0
+  height: 0
+  border-left: 38px solid transparent
+  border-right: 19px solid transparent
+  border-bottom: 36px solid $color-pink
+  transform: rotate(-23deg) 
+  top: 125px
+  right: 31%
+.tool_triangle-2,
+.tool_triangle-3
+  width: 101px
+  height: 102px
+  overflow: hidden
+  box-shadow: 0 16px 9px -17px  rgba(147, 192, 209, 0.7)
+  &:after 
+    content: ""
+    position: absolute
+    width: 50px
+    height: 50px
+    background: $color-white
+.tool_triangle-2  
+  transform: rotate(-54deg)
+  left: -88px
+  top: 350px
+  &:after   
+    transform: rotate(50deg)
+    top: 79px
+    left: 28px
+    box-shadow: -9px -6px 27px -2px  rgba(147, 192, 209, 0.7)
+.tool_triangle-3
+  transform: rotate(40deg)
+  right: 24px
+  bottom: 270px
+  &:after   
+    transform: rotate(50deg)
+    top: 79px
+    left: 28px
+    box-shadow: -9px -6px 27px -2px  rgba(147, 192, 209, 0.7)
+.tool_triangle-4
+  width: 0
+  height: 0
+  border-left: 9px solid transparent
+  border-right: 0px solid transparent
+  border-bottom: 34px solid #050505
+  transform: rotate(115deg)
+  right: 109px
+  bottom: 255px
+
+// Картинки на главной ====================
+.blue-circle
+  position: absolute
+  border-radius: 50%
+  background: $color-blue
+  z-index: -2
+.blue-circle-home
+  width: 804px
+  height: 804px
+  right: -178px
+  top: -246px
+  box-shadow: 8px 10px 40px $color-blue-shadow
+.blue-circle-voucher 
+  width: 568px
+  height: 568px
+  left: -268px
+  top: 242px
+  &::before
+    content: ' '
+    position: absolute
+    width: 616px
+    height: 616px
+    left: -11px
+    top: -33px
+    border: 1px solid rgba(16, 21, 125, 0.5)
+    transform: rotate(-24.58deg)
+  &::after
+    content: url('../img/decor-2.png')
+    position: absolute
+    top: 112px
+    right: -39px
+
+.img-smoke-home
+  position: absolute
+  right: -34px
+  top: 0
+  z-index: -1 

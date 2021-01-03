@@ -1,0 +1,59 @@
+//НАЧАЛО: Ссылки-кнопки ======================
+a.btn-contact-us 
+  position: relative
+  z-index: 1
+  display: inline-block
+  background: linear-gradient(278.53deg, $color-blue 12.65%, $color-pink 95.96%)
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  color: $color-white
+  font-size: 24px
+  padding: 16px 36px
+  border-radius: 100px
+  .btn-gradient 
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    background: linear-gradient(278.53deg, $color-pink 12.65%, $color-blue 95.96%)
+    transition: opacity .2s linear
+    border-radius: 100px
+  &:hover .btn-gradient
+    opacity: 1
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25)
+.phone-link
+  a.phone-link__tel 
+    color: $color-white
+    font-size: 24px
+    margin-right: 61px
+    transition: .2s
+    &:hover 
+      color: $color-pink
+  a.phone-link__btn 
+    position: relative
+    z-index: 1
+    display: inline-block
+    border: 2px solid $color-pink
+    color: $color-pink
+    font-size: 18px
+    padding: 12px 31px
+    border-radius: 100px
+    transition: .2s
+    .btn-fone 
+      position: absolute
+      z-index: -1
+      top: -2px
+      left: -1px
+      width: 101%
+      height: 108%
+      opacity: 0
+      background: $color-pink
+      transition: opacity .2s linear
+      border-radius: 100px
+    &:hover
+      color: $color-white
+      .btn-fone 
+        opacity: 1
+//КОНЕЦ: Ссылки-кнопки ======================

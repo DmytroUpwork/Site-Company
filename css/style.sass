@@ -1,8 +1,5 @@
-$color-black: #000
-$color-white: #fff
-$color-blue: #10157D
-$color-blue-shadow: rgba(16, 21, 125, 0.3)
-$color-pink: #EB0089
+@import "_color", "_decor", "_link-effect.sass", "_menu.sass"
+
 @font-face
   font-family: 'Montserrat'
   src: url('../fonts/Montserrat-Bold.ttf') format('truetype')
@@ -35,105 +32,35 @@ h3
   max-width: 418px
   margin-bottom: 90px
   font-family: 'Montserrat-Light', sans-serif
+.row 
+  flex-wrap: wrap
 .d-flex 
   display: flex
 .jc-center 
   justify-content: center
+.ai-center 
+  align-items: center
 .jc-flex-end 
   justify-content: flex-end
 .jc-space-between
   justify-content: space-between
+.flex-40 
+  flex: 40%!important
+  max-width: 40%!important
+.flex-32 
+  flex: 32%!important
+  max-width: 32%!important
+.flex-28
+  flex: 28%!important
+  max-width: 28%!important
 .flex-dr-col 
   flex-direction: column
 .block-card
   margin: 0 0 123px 56px
 
-//НАЧАЛО: Меню верхнее ====================
-.container-menu
-  width: calc( 100% - 117px )
-  margin: 57px auto 173px
-  position: relative
-  .decor-1 
-    position: absolute
-    bottom: -28px
-    left: 357px
-  .navbar 
-    margin-left: 50px
-    .collapse 
-      .navbar-nav 
-        .nav-item 
-          margin-right: 32px
-          .nav-link
-            font-size: 18px
-            transition: .2s
-            color: $color-black
-            font-weight: 600
-            &:hover 
-              color: $color-pink
-//КОНЕЦ: Меню верхнее ====================
 
-//НАЧАЛО: Боковое меню фиксированное ===========
-.menu-fixed
-  position: fixed 
-  top: 54px
-  left: 28px
-  bottom: 61px
-  display: flex;
-  flex-direction: column
-  justify-content: space-between
-  z-index: 99999
-  .decor-line 
-    display: block
-    width: 40px
-    height: 1px
-    background: $color-black
-    transform: rotate(90deg)
-  .block-sprite 
-    .icon
-      margin-bottom: 33px
-  .navbar-toggler 
-    margin: 8px 8px 0 8px
-    border: none
-    background: transparent
-    position: relative
-    height: 13px
-    &:hover .navbar-toggler-icon,
-    &:hover .navbar-toggler-icon:before,
-    &:hover .navbar-toggler-icon:after,
-      background: $color-pink
-    &:hover .navbar-toggler-icon.active-color,
-    &:hover .navbar-toggler-icon.active-color:before,
-    &:hover .navbar-toggler-icon.active-color:after,
-      background:  #81eb00!important
-    .navbar-toggler-icon 
-      width: 15px
-      height: 2px
-      display: block
-      background: $color-black
-      transition: .2s
-      &:before,
-      &:after 
-        content: ' '
-        width: 15px
-        height: 2px
-        display: block
-        background: $color-black
-        position: absolute
-        transition: .2s
-      &:before 
-        top: 0
-      &:after 
-        bottom: 0
-    .navbar-toggler-icon.active-color
-      &:before,
-      &:after 
-        background: $color-pink
-.active-color-svg 
-  fill: $color-pink
-.active-color 
-  background: $color-pink!important
 
-//КОНЕЦ: Боковое меню фиксированное ===========
+
 
 // НАЧАЛО: Стили контейнеров =============
 .container-body 
@@ -162,213 +89,98 @@ h3
   margin: 0 auto
   position: relative
 .container-voucher 
-  width: calc( 100% - 116px )
-  margin: 0 auto
+  width: calc( 100% - 439px )
+  margin: 0 67px 0 auto
 // КОНЕЦ: Стили контейнеров =============
-
-// Картинки на главной ====================
-.blue-circle
-  position: absolute
-  border-radius: 50%
-  background: $color-blue
-  z-index: -2
-.blue-circle-home
-  width: 804px
-  height: 804px
-  right: -178px
-  top: -246px
-  box-shadow: 8px 10px 40px $color-blue-shadow
-.blue-circle-voucher 
-  width: 568px
-  height: 568px
-  left: -268px
-  top: 242px
-.img-smoke-home
-  position: absolute
-  right: -34px
-  top: 0
-  z-index: -1 
-
-//НАЧАЛО: Ссылки-кнопки ======================
-a.btn-contact-us 
-  position: relative
-  z-index: 1
-  display: inline-block
-  background: linear-gradient(278.53deg, $color-blue 12.65%, $color-pink 95.96%)
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-  color: $color-white
-  font-size: 24px
-  padding: 16px 36px
-  border-radius: 100px
-  .btn-gradient 
-    position: absolute
-    z-index: -1
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    opacity: 0
-    background: linear-gradient(278.53deg, $color-pink 12.65%, $color-blue 95.96%)
-    transition: opacity .2s linear
-    border-radius: 100px
-  &:hover .btn-gradient
-    opacity: 1
-    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25)
-.phone-link
-  a.phone-link__tel 
-    color: $color-white
-    font-size: 24px
-    margin-right: 61px
-    transition: .2s
-    &:hover 
-      color: $color-pink
-  a.phone-link__btn 
-    position: relative
-    z-index: 1
-    display: inline-block
-    border: 2px solid $color-pink
-    color: $color-pink
-    font-size: 18px
-    padding: 12px 31px
-    border-radius: 100px
-    transition: .2s
-    .btn-fone 
-      position: absolute
-      z-index: -1
-      top: -2px
-      left: -1px
-      width: 101%
-      height: 108%
-      opacity: 0
-      background: $color-pink
-      transition: opacity .2s linear
-      border-radius: 100px
-    &:hover
-      color: $color-white
-      .btn-fone 
-        opacity: 1
-//КОНЕЦ: Ссылки-кнопки ======================
 
 //НАЧАЛО: Карточки =====================
 .card 
-  width: 27%
-  transition: .3s
-  .card-header 
-    margin-bottom: 20px
-    text-align: center
-  .card-content
-    h4 
-      font-family: 'Montserrat-Bold', sans-serif
-      font-weight: 900
-      margin-bottom: 16px
-    p 
-      font-family: 'Montserrat-Light', sans-serif
-      margin-bottom: 30px
-
-.card-services
-  text-align: center
-  padding: 40px 33px 17px
-  box-shadow: 9px 12px 40px #93C0D1
-  border-radius: 50px
-  margin: 0 46px 42px
-  background: $color-white
-  &:hover
-    background: $color-blue
-  &:hover .icon-card-services
-    fill: $color-white
-  &:hover .card-content h4 
-    color: $color-pink
-  &:hover p 
-    color: $color-white
-  .card-content
-    +d-flex-sb-column
-    height: calc(100% - 175px)
-    h4 
-      color: $color-blue   
-      font-size: 24px
-      min-height: 63px
-    p 
-      font-size: 22px
-      min-height: 80px
-    a 
-      background: $color-pink
-      font-family: 'Montserrat-Bold', sans-serif
-      font-weight: 600
-      border-radius: 100px
-      color: $color-white
-      padding: 9px 46px
-      margin: 0 auto
-      transition: .2s
-      &:hover 
-        background: $color-white
-        color: $color-black
-        box-shadow: 4px 7px 20px rgba(255, 255, 255, 0.4)
+  flex: 0 0 33.333%
+  max-width: 33%
+  flex-wrap: wrap
+  .card-body
+    text-align: center   
+    box-shadow: 9px 12px 40px #93C0D1
+    border-radius: 50px
+    background: $color-white
+    .card-header 
+      margin-bottom: 20px
+      text-align: center
+    .card-content
+      h4 
+        font-family: 'Montserrat-Bold', sans-serif
+        font-weight: 900
+        margin-bottom: 16px
+      p 
+        font-family: 'Montserrat-Light', sans-serif
+        margin-bottom: 30px
 .card-voucher 
+  .card-header
+    min-height: 150px
+    margin-bottom: 19px
   .card-content
     font-size: 18px
+    h4 
+      margin-bottom: 26px
+      font-weight: 900
+      font-family: 'Montserrat-Bold', sans-serif
 //КОНЕЦ: Карточки =====================
 
 //НАЧАЛО: Секция "Услуги" ===================
 .sec-services
   padding: 300px 0 150px 
-.tool_triangle 
-  position: absolute 
-.tool_triangle-1 
-  width: 0
-  height: 0
-  border-left: 38px solid transparent
-  border-right: 19px solid transparent
-  border-bottom: 36px solid $color-pink
-  transform: rotate(-23deg) 
-  top: 125px
-  right: 31%
-.tool_triangle-2,
-.tool_triangle-3
-  width: 101px
-  height: 102px
-  overflow: hidden
-  box-shadow: 0 16px 9px -17px  rgba(147, 192, 209, 0.7)
-  &:after 
-    content: ""
-    position: absolute
-    width: 50px
-    height: 50px
-    background: $color-white
-.tool_triangle-2  
-  transform: rotate(-54deg)
-  left: -88px
-  top: 350px
-  &:after   
-    transform: rotate(50deg)
-    top: 79px
-    left: 28px
-    box-shadow: -9px -6px 27px -2px  rgba(147, 192, 209, 0.7)
-.tool_triangle-3
-  transform: rotate(40deg)
-  right: 24px
-  bottom: 270px
-  &:after   
-    transform: rotate(50deg)
-    top: 79px
-    left: 28px
-    box-shadow: -9px -6px 27px -2px  rgba(147, 192, 209, 0.7)
-.tool_triangle-4
-  width: 0
-  height: 0
-  border-left: 9px solid transparent
-  border-right: 0px solid transparent
-  border-bottom: 34px solid #050505
-  transform: rotate(115deg)
-  right: 109px
-  bottom: 255px
+  .card-services
+    padding: 0 46px 42px
+    .card-body
+      padding: 40px 33px 17px
+      transition: .3s
+      &:hover
+        background: $color-blue
+      &:hover .icon-card-services
+        fill: $color-white
+      &:hover .card-content h4 
+        color: $color-pink
+      &:hover p 
+        color: $color-white
+      .card-content
+        +d-flex-sb-column
+        height: calc(100% - 175px)
+        h4 
+          color: $color-blue   
+          font-size: 24px
+          min-height: 63px
+        p 
+          font-size: 22px
+          min-height: 80px
+        a 
+          background: $color-pink
+          font-family: 'Montserrat-Bold', sans-serif
+          font-weight: 600
+          border-radius: 100px
+          color: $color-white
+          padding: 9px 46px
+          margin: 0 auto
+          transition: .2s
+          &:hover 
+            background: $color-white
+            color: $color-black
+            box-shadow: 4px 7px 20px rgba(255, 255, 255, 0.4)
 //КОНЕЦ: Секция "Услуги" ===================
 
 //НАЧАЛО: Секция "Гарантии" ===================
 .sec-voucher 
-  padding: 0 0 1106px
+  padding: 0 0 290px
   position: relative
+  &::after
+    content: url('../img/decor-3.png')
+    position: absolute
+    top: 135px
+    right: 181px
   .container-card 
     margin-bottom: 95px
+  .container-voucher
+    .card-voucher 
+      padding: 18px
 //КОНЕЦ: Секция "Гарантии" ===================
 
 

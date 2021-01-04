@@ -18,5 +18,20 @@
   margin: 0;
 }
 
+.logo-company {
+  width: 216px;
+  height: 60px;
+  fill: #241654;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.logo-company:hover {
+  fill: #EB0089;
+}
+
+
+
+
 
 

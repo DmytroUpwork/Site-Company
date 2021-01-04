@@ -5089,7 +5089,7 @@
       this.isDefaultPrevented = returnTrue;
 
       if (e && e.preventDefault) {
-        e.preventDefault(false);
+        e.preventDefault();
       }
     },
     stopPropagation: function () {

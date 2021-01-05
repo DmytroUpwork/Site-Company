@@ -25,7 +25,8 @@ $(document).on( "ready", function(){
   // Слайдер
   $(".center").slick({
     centerMode: true,
-    centerPadding: "60px",
+    centerPadding: "50px",
+    variableWidth: true,
     dots: true,
     slidesToShow: 3,
     responsive: [
@@ -34,7 +35,7 @@ $(document).on( "ready", function(){
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: "40px",
+          centerPadding: "50px",
           slidesToShow: 3,
         },
       },
@@ -43,7 +44,7 @@ $(document).on( "ready", function(){
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: "40px",
+          centerPadding: "50px",
           slidesToShow: 1,
         },
       },

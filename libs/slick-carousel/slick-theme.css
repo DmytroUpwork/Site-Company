@@ -169,7 +169,7 @@
 
     display: inline-block;
 
-    width: 20px;
+    width: 87px;
     height: 20px;
     margin: 0 5px;
     padding: 0;
@@ -180,16 +180,18 @@
     font-size: 0;
     line-height: 0;
     display: block;
-    width: 71px;
+    width: 97px;
     height: 0px;
     /* padding: 5px; */
     
     cursor: pointer;
     /* color: transparent; */
     
-    border-bottom: 1px;
+    /* border-bottom: 1px; */
     outline: none;
     background: #000;
+    /* свои стили */
+    border: none;
 }
 .slick-dots li button:hover,
 .slick-dots li button:focus
@@ -231,4 +233,6 @@
 
 .slick-dots li.slick-active button {
     height: 20px;
+    background: #10157D;
+    border-radius: 10px;
 }

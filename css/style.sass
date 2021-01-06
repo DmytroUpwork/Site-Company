@@ -40,6 +40,8 @@ h3
   justify-content: center
 .ai-center 
   align-items: center
+.ai-end 
+  align-items: flex-end
 .jc-flex-end 
   justify-content: flex-end
 .jc-space-between
@@ -117,6 +119,7 @@ h3
     box-shadow: 9px 12px 40px #93C0D1
     border-radius: 50px
     background: $color-white
+
     .card-header 
       margin-bottom: 20px
       text-align: center
@@ -167,6 +170,7 @@ h3
       transition: .3s
       &:hover
         background: $color-blue
+        box-shadow: 10px 17px 67px #93C0D1
       &:hover .icon-card-services
         fill: $color-white
       &:hover .card-content h4 
@@ -307,8 +311,6 @@ form
     .col-1,
     .col-2 
       padding: 0 30px
-      display: flex
-      align-items: flex-end
     .form-control 
       border-bottom: 1px solid rgba(0, 0, 0, 0.5)
       border-top: none
@@ -317,11 +319,62 @@ form
       width: 100%
       padding: 20px 0
       font-size: 24px
-      .form-check 
+      transition: 0.3s
+      &:hover 
+        border-bottom: 1px solid $color-pink
+.btn-submit 
+  margin: 0 40px 0 50px
 
-.form-check-input 
+.form-check-input
+  opacity: 0
+  z-index: -1
+  & + label
+    display: inline-flex
+    align-items: center
+    user-select: none
+    &:before
+      content: ''
+      width: 1em
+      height: 1em
+      border: 1px solid #adb5bd
+      border-radius: 0.25em
+      margin-right: 0.5em
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 60% 60%
+      transition: .3s
+  &:checked+label::before
+    border: none
+    background-color: $color-pink
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25)
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+ 
+.input__wrapper
+  position: relative
+  #input-file 
+    position: absolute
+    opacity: 0
+    visibility: hidden
+  label 
+    .input__file-icon-wrapper 
+      .icon-card 
+        position: absolute
+        left: 3px
+        bottom: 0
+        width: 45px
+        height: 45px
+        transition: .3s
+  &:hover .icon-card 
+    fill: $color-pink
+.input__file-button
+  margin-left: 30px
+  .input__file-button-text
+    font-size: 18px
+    font-weight: 600
+    
 
 .form-check-label 
+  padding-left: 15px 
 
 
 

@@ -23,6 +23,12 @@
   &:hover .btn-gradient
     opacity: 1
     box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25)
+  &:active
+    transform: translateY(2px)
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25)
+    &:hover .btn-gradient
+      opacity: 1
+      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25)
 .phone-link
   a.phone-link__tel 
     color: $color-white
@@ -62,11 +68,12 @@
 .link__btn-brief
   border: none
   color: $color-white
+  
   .btn-fone
     background: $color-pink
     opacity: 1
+    transition: .3s
   &:hover
-    color: $color-pink
     .btn-fone
-      background: red
+      background: #9d00ff
 //КОНЕЦ: Ссылки-кнопки ======================

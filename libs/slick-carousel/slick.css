@@ -142,3 +142,8 @@
     z-index: 99999;
 }
 
+.slick-prev:active, .slick-next:active {
+    box-shadow: 7px 5px 34px -9px rgba(147, 192, 209, 0.5);
+    transform: translateY(-28px);
+}
+

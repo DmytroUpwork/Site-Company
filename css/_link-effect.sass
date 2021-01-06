@@ -1,5 +1,5 @@
 //НАЧАЛО: Ссылки-кнопки ======================
-a.btn-contact-us 
+.btn-contact-us 
   position: relative
   z-index: 1
   display: inline-block
@@ -31,29 +31,42 @@ a.btn-contact-us
     transition: .2s
     &:hover 
       color: $color-pink
-  a.phone-link__btn 
-    position: relative
-    z-index: 1
-    display: inline-block
-    border: 2px solid $color-pink
-    color: $color-pink
-    font-size: 18px
-    padding: 12px 31px
+.link__btn 
+  position: relative
+  z-index: 1
+  display: inline-block
+  font-size: 18px
+  padding: 12px 31px
+  border-radius: 100px
+  transition: .2s
+  .btn-fone 
+    position: absolute
+    z-index: -1
+    top: -2px
+    left: -1px
+    width: 101%
+    height: 108%
+    transition: opacity .2s linear
     border-radius: 100px
-    transition: .2s
+  
+.link__btn-project
+  border: 2px solid $color-pink
+  color: $color-pink
+  .btn-fone
+    background: $color-pink
+    opacity: 0
+  &:hover
+    color: $color-white
     .btn-fone 
-      position: absolute
-      z-index: -1
-      top: -2px
-      left: -1px
-      width: 101%
-      height: 108%
-      opacity: 0
-      background: $color-pink
-      transition: opacity .2s linear
-      border-radius: 100px
-    &:hover
-      color: $color-white
-      .btn-fone 
-        opacity: 1
+      opacity: 1
+.link__btn-brief
+  border: none
+  color: $color-white
+  .btn-fone
+    background: $color-pink
+    opacity: 1
+  &:hover
+    color: $color-pink
+    .btn-fone
+      background: red
 //КОНЕЦ: Ссылки-кнопки ======================

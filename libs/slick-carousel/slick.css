@@ -121,7 +121,12 @@
 .slick-slide {
     transform: scale(0.5);
     opacity: 0.7;
+}
+.center-reviews .slick-slide {
     padding: 20px;
+}
+.center-about-us .slick-slide {
+    padding: 0 44px;
 }
 
 .slick-slide.slick-current {

@@ -1,4 +1,4 @@
-@import "_color", "_decor", "_link-effect", "_menu"
+@import "_color", "_decor", "_link-effect", "_menu", "_style-slick-slider"
 
 @font-face
   font-family: 'Montserrat'
@@ -57,9 +57,12 @@ h3
   flex-direction: column
 .block-card
   margin: 0 0 123px 56px
+.col-2 
+  flex: 0 0 50%
+  max-width: 50%
+  padding: 0 15px
 
 
-.logo 
 
 
 // НАЧАЛО: Стили контейнеров =============
@@ -91,6 +94,10 @@ h3
 .container-voucher 
   width: calc( 100% - 439px )
   margin: 0 67px 0 auto
+.container-about-us 
+  width: calc( 100% - 160px)
+  margin: 0px 12px 0px auto
+
 // КОНЕЦ: Стили контейнеров =============
 
 //НАЧАЛО: Карточки =====================
@@ -126,9 +133,26 @@ h3
       font-family: 'Montserrat-Bold', sans-serif
 //КОНЕЦ: Карточки =====================
 
+//НАЧАЛО: Секция Главная ===================
+.sec-home 
+  padding-bottom: 300px
+  position: relative
+  &:before
+    content: ''
+    width: 804px
+    height: 804px
+    right: -178px
+    top: -246px
+    box-shadow: 8px 10px 40px $color-blue-shadow
+    position: absolute
+    border-radius: 50%
+    background: $color-blue
+    z-index: -2
+//КОНЕЦ: Секция Главная ===================
+
 //НАЧАЛО: Секция "Услуги" ===================
 .sec-services
-  padding: 300px 0 150px 
+  padding-bottom: 150px 
   .card-services
     padding: 0 46px 42px
     .card-body
@@ -149,9 +173,7 @@ h3
           color: $color-blue   
           font-size: 24px
           min-height: 63px
-        p 
-          font-size: 22px
-          min-height: 80px
+        
         a 
           background: $color-pink
           font-family: 'Montserrat-Bold', sans-serif
@@ -171,11 +193,30 @@ h3
 .sec-voucher 
   padding: 0 0 290px
   position: relative
-  &::after
-    content: url('../img/decor-3.png')
+  
+  .blue-circle-voucher 
     position: absolute
-    top: 135px
-    right: 181px
+    border-radius: 50%
+    background: $color-blue
+    z-index: -2
+    width: 568px
+    height: 568px
+    left: -268px
+    top: 242px
+    &:before
+      content: ''
+      position: absolute
+      width: 616px
+      height: 616px
+      left: -11px
+      top: -33px
+      border: 1px solid rgba(16, 21, 125, 0.5)
+      transform: rotate(-24.58deg)
+    &:after
+      content: url('../img/decor-2.png')
+      position: absolute
+      top: 112px
+      right: -39px
   .container-card 
     margin-bottom: 95px
   .container-voucher
@@ -185,51 +226,58 @@ h3
 
 
 
-.sec-reviews 
+.sec-reviews,
+.sec-about-us
   padding-bottom: 200px
-  .slick-slide
-    max-width: 646px
-    margin: 0 -80px
-    .card-avatar 
-      box-shadow: 9px 10px 30px rgba(147, 192, 209, 0.5)
-      background: $color-white
-      padding: 30px 36px
-      margin: 70px 0
-      font-family: 'Montserrat-Bold', sans-serif
-      .card-avatar__header 
-        margin-bottom: 50px
-        .card-avatar__header_photo
-          .card-avatar__header_photoimg
-            min-width: 107px
-            height: 107px
-            overflow: hidden
-            position: relative
-            img 
-              position: absolute
-              width: 100%
-              height: 100%
-              object-fit: cover
-              object-position: center
-          .card-avatar__header_name
-            font-size: 24px
-            color: #000
-            font-weight: bold
-            padding-left: 21px
-        .card-avatar__header_title 
-          font-size: 18px
-          line-height: 22px
-          color: #10CFFC
-          
-          span
-            transition: .3s
-            &:hover
-              color: $color-pink
-      p 
-        font-size: 24px
-        line-height: 29px
-        margin-bottom: 26px
+  font-family: 'Montserrat-Bold', sans-serif
+  p 
+    font-size: 22px
+    min-height: 80px
+    text-indent: 10px
+.sec-about-us 
+  h2 
+    padding: 0 0 148px
+  h3 
+    margin: 24px auto 53px
+    text-align: center
 
-        
+.about-us__col-1
+  position: relative
+  &:before 
+    content: url('../img/decor-klipartz.png')
+    position: absolute
+    bottom: -48px
+    left: -50px
+  &:after 
+    content: ''
+    width: 0
+    height: 0
+    border-left: 38px solid transparent
+    border-right: 19px solid transparent
+    border-bottom: 36px solid $color-pink
+    transform: rotate(58deg) 
+    top: 143px
+    right: 232px
+    position: absolute
+
+.about-us__col-2
+  position: relative
+  &:before 
+    content: url('../img/decor-klipartz-1.png')
+    position: absolute
+    top: -58px
+    right: 0
+  &:after 
+    content: ''
+    position: absolute
+    top: -92px
+    right: 24px
+    width: 547px
+    height: 547px
+    border: 1px solid #10157D
+    border-radius: 50%
+    z-index: -1
+
 
 
 

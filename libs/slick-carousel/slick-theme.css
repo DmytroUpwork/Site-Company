@@ -27,8 +27,7 @@
 
     display: block;
 
-    width: 71px;
-    height: 71px;
+    
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
@@ -41,6 +40,21 @@
     outline: none;
     background: transparent;
 }
+
+
+.center-reviews .slick-next,
+.center-reviews .slick-prev {
+    width: 71px;
+    height: 71px;
+}
+
+.center-about-us .slick-next,
+.center-about-us .slick-prev {
+    width: 50px;
+    height: 50px;
+}
+
+
 .slick-prev:hover,
 .slick-prev:focus,
 .slick-next:hover,
@@ -77,15 +91,45 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.slick-prev
+.center-reviews .slick-prev
 {
     left: -25px;
 }
-[dir='rtl'] .slick-prev
+[dir='rtl'] .center-reviews .slick-prev
 {
     right: -25px;
     left: auto;
 }
+
+.center-reviews .slick-prev {
+    left: -25px;
+}
+
+[dir='rtl'] .center-reviews .slick-prev {
+    right: -25px;
+    left: auto;
+}
+
+.center-about-us .slick-prev {
+    left: 0;
+}
+
+[dir='rtl'] .center-about-us .slick-prev {
+    right: 0;
+    left: auto;
+}
+
+.center-about-us .slick-prev {
+    left: 0;
+}
+
+[dir='rtl'] .center-about-us .slick-prev {
+    right: 0;
+    left: auto;
+}
+
+
+
 .slick-prev:before
 {
     content: '';
@@ -93,9 +137,6 @@
     border-left: 1px solid #EB0089;
     border-top: 1px solid #EB0089;
     transform: rotate(-45deg);
-    width: 20px;
-    height: 20px;
-    margin: 25px auto 24px 28px;
 
 }
 [dir='rtl'] .slick-prev:before
@@ -105,10 +146,27 @@
     border-left: 1px solid #EB0089;
     border-top: 1px solid #EB0089;
     transform: rotate(-45deg);
+}
+
+.center-reviews .slick-prev:before {
     width: 20px;
     height: 20px;
     margin: 25px auto 24px 28px;
 }
+
+.center-about-us .slick-prev:before {
+    width: 10px;
+    height: 10px;
+    margin: 17px auto 17px 22px;
+
+}
+
+
+
+
+
+
+
 
 .slick-next
 {
@@ -119,6 +177,28 @@
     right: auto;
     left: -25px;
 }
+
+.center-about-us .slick-next {
+    right: 0;
+}
+
+[dir='rtl'] .center-about-us .slick-next {
+    right: 0;
+    right: auto;
+}
+
+.center-about-us .slick-next {
+    right: 0;
+}
+
+[dir='rtl'] .center-about-us .slick-next {
+    right: 0;
+    left: auto;
+}
+
+
+
+
 .slick-next:before
 {
     content: '';
@@ -126,9 +206,6 @@
     border-left: 1px solid #EB0089;
     border-top: 1px solid #EB0089;
     transform: rotate(135deg);
-    width: 20px;
-    height: 20px;
-    margin: 25px auto 24px 22px;
 }
 [dir='rtl'] .slick-next:before
 {
@@ -137,10 +214,29 @@
     border-left: 1px solid #EB0089;
     border-top: 1px solid #EB0089;
     transform: rotate(45deg);
+}
+
+.center-reviews .slick-next:before {
     width: 20px;
     height: 20px;
-    margin: 25px auto 24px 22px;
+    margin: 25px auto 24px 23px;
 }
+
+.center-about-us .slick-next:before {
+    width: 10px;
+    height: 10px;
+    margin: 20px auto 20px 19px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Dots */
 .slick-dotted.slick-slider

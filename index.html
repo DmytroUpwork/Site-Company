@@ -24,49 +24,6 @@
   </head>
   <body>
 
-    <!--НАЧАЛО: Элементы декора ==================== -->
-    <img src="img/group-smoke.png" alt="" class="img-smoke-home">
-    <div class="blue-circle blue-circle-home"></div>
-    <!--КОНЕЦ: Элементы декора ==================== -->
-
-    
-    
-    
-    <!--НАЧАЛО: Шапка сайта ==================== -->
-    <header>
-      <div class="container-menu">
-        <img src="./img/decor-1.png" alt="decor" class="decor-1">
-        <nav class="navbar d-flex jc-space-between ai-center">
-          <div class="collapse">
-            <ul class="navbar-nav d-flex">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Все проекты</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Отзывы</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Услуги</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Контакты</a>
-              </li>
-            </ul>
-          </div>
-          <div class="logo">
-            <svg class="icon logo-company">
-              <use xlink:href="img/sprite.svg#logo"></use>
-            </svg>
-          </div>
-          <div class="phone-link">
-            <a href="tel:+380985209620" class="phone-link__tel">+380 985 209 620</a>
-            <a href="#!" class="btn phone-link__btn"><span class="btn-fone"></span> Начать проект </a>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!--КОНЕЦ: Шапка сайта ==================== -->
-
     <!--НАЧАЛО: Фиксированное боковое меню ==================== -->
     <div class="menu-fixed">
       <button class="navbar-toggler">
@@ -93,11 +50,57 @@
     </div>
     <!--КОНЕЦ: Фиксированное боковое меню ==================== -->
 
-    <div class="container-body">
-      <h1 class="title-home"> Сайты с разрывом шаблонов </h1>
-      <h3 class="subtitle-home"> Создаём адаптивные уникальные сайты </h3>
-      <a href="#!" class="btn btn-contact-us"><span class="btn-gradient"></span> Связаться с нами </a>
-    </div>
+    <!--НАЧАЛО: Элементы декора ==================== -->
+    
+    <!-- <div class="blue-circle blue-circle-home"></div> -->
+    <!--КОНЕЦ: Элементы декора ==================== -->
+
+    
+    <!--НАЧАЛО: Главная ==================== -->
+    <section class="sec-home">
+      <img src="img/group-smoke.png" alt="" class="img-smoke-home">
+      <!--НАЧАЛО: Шапка сайта ==================== -->
+      <header>
+        <div class="container-menu">
+          <img src="./img/decor-1.png" alt="decor" class="decor-1">
+          <nav class="navbar d-flex jc-space-between ai-center">
+            <div class="collapse">
+              <ul class="navbar-nav d-flex">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Все проекты</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Отзывы</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Услуги</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="logo">
+              <svg class="icon logo-company">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </div>
+            <div class="phone-link">
+              <a href="tel:+380985209620" class="phone-link__tel">+380 985 209 620</a>
+              <a href="#!" class="btn phone-link__btn"><span class="btn-fone"></span> Начать проект </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!--КОНЕЦ: Шапка сайта ==================== -->
+      <div class="container-body">
+        <h1 class="title-home"> Сайты с разрывом шаблонов </h1>
+        <h3 class="subtitle-home"> Создаём адаптивные уникальные сайты </h3>
+        <a href="#!" class="btn btn-contact-us"><span class="btn-gradient"></span> Связаться с нами </a>
+      </div>
+    </section>
+    <!--КОНЕЦ: Главная ==================== -->
+    
 
     <!--НАЧАЛО: Секция услуги, карточки ==================== -->
     <section class="sec-services">
@@ -198,7 +201,7 @@
 
     <!--НАЧАЛО: Секция гарантии ==================== -->
     <section class="sec-voucher">
-      <div class="blue-circle blue-circle-voucher"></div>
+      <div class="blue-circle-voucher"></div>
       <div class="container-card">
         <h2 class="block-card">Мы гарантируем</h2>
       </div>
@@ -237,22 +240,11 @@
     
     <!--КОНЕЦ: Секция гарантии ==================== -->
 
+    <!--НАЧАЛО: Секция отзывы ==================== -->
     <section class="sec-reviews">
       <div class="container-card">
         <h2 class="block-card">Слово нашим клиентам</h2>
-
-
-
-
-
-
-
-
-
-        <div class="center">
-
-         
-
+        <div class="center center-reviews">
           <div class="card-avatar">
             <div class="card-avatar__header d-flex jc-space-between ai-center">
               <div class="card-avatar__header_photo d-flex ai-center">
@@ -278,8 +270,6 @@
               <a href="#!" class="btn btn-contact-us"><span class="btn-gradient"></span> Связаться с нами </a>
             </div>
           </div>
-
-
           <div class="card-avatar">
             <div class="card-avatar__header d-flex jc-space-between ai-center">
               <div class="card-avatar__header_photo d-flex ai-center">
@@ -305,7 +295,6 @@
               <a href="#!" class="btn btn-contact-us"><span class="btn-gradient"></span> Связаться с нами </a>
             </div>
           </div>
-
           <div class="card-avatar">
             <div class="card-avatar__header d-flex jc-space-between ai-center">
               <div class="card-avatar__header_photo d-flex ai-center">
@@ -331,7 +320,6 @@
               <a href="#!" class="btn btn-contact-us"><span class="btn-gradient"></span> Связаться с нами </a>
             </div>
           </div>
-
           <div class="card-avatar">
             <div class="card-avatar__header d-flex jc-space-between ai-center">
               <div class="card-avatar__header_photo d-flex ai-center">
@@ -357,7 +345,6 @@
               <a href="#!" class="btn btn-contact-us"><span class="btn-gradient"></span> Связаться с нами </a>
             </div>
           </div>
-
           <div class="card-avatar">
             <div class="card-avatar__header d-flex jc-space-between ai-center">
               <div class="card-avatar__header_photo d-flex ai-center">
@@ -383,16 +370,83 @@
               <a href="#!" class="btn btn-contact-us"><span class="btn-gradient"></span> Связаться с нами </a>
             </div>
           </div>
-          
         </div>
-
-
-
-
       </div>
-
-
     </section>
+    <!--КОНЕЦ: Секция отзывы ==================== -->
+
+    <!--НАЧАЛО: Секция о нас ==================== -->
+
+    <section class="sec-about-us">
+      <div class="container-about-us">
+        <div class="row d-flex">
+          <div class="col-2 about-us__col-1">
+            <h2>О нас</h2>
+            <p>
+               Мы молодая компания однако за плечами каждого из нашей команды есть ценный опыт работы.
+            </p>
+            <p>
+               Благодаря нашей сплачёной работе вы получите неповторимый, продающий сайт который не будет ломатся, 
+               а дизайн привлекать новых и радовать прежних клиентов.
+            </p>
+          </div>
+
+          <div class="col-2 about-us__col-2">
+
+            <h3>Портфолио</h3>
+
+            <div class="center center-about-us">
+              <div class="card-avatar">
+                <div class="card-avatar__header">
+                  <img src="./img/Frame1.jpg" alt="avatar-photo">
+                </div>
+                <div class="card-avatar__contact d-flex jc-center">
+                  <a href="#!"> https://www.sembook.ru/book/rabot </a>
+                </div>
+              </div>
+              <div class="card-avatar">
+                <div class="card-avatar__header">
+                  <img src="./img/Frame1.jpg" alt="avatar-photo">
+                </div>
+                <div class="card-avatar__contact d-flex jc-center">
+                  <a href="#!"> https://www.sembook.ru/book/rabot </a>
+                </div>
+              </div>
+              <div class="card-avatar">
+                <div class="card-avatar__header">
+                  <img src="./img/Frame1.jpg" alt="avatar-photo">
+                </div>
+                <div class="card-avatar__contact d-flex jc-center">
+                  <a href="#!"> https://www.sembook.ru/book/rabot </a>
+                </div>
+              </div>
+              <div class="card-avatar">
+                <div class="card-avatar__header">
+                  <img src="./img/Frame1.jpg" alt="avatar-photo">
+                </div>
+                <div class="card-avatar__contact d-flex jc-center">
+                  <a href="#!"> https://www.sembook.ru/book/rabot </a>
+                </div>
+              </div>
+              <div class="card-avatar">
+                <div class="card-avatar__header">
+                  <img src="./img/Frame1.jpg" alt="avatar-photo">
+                </div>
+                <div class="card-avatar__contact d-flex jc-center">
+                  <a href="#!"> https://www.sembook.ru/book/rabot </a>
+                </div>
+              </div>
+              
+              
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--КОНЕЦ: Секция о нас ==================== -->
 
  
 

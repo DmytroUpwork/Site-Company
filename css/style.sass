@@ -106,6 +106,9 @@ h3
 .container-form 
   width: calc( 100% - 192px)
   margin: 0 67px 0 auto
+.container-footer
+  width: calc( 100% - 192px)
+  margin: 0 auto
 
 // КОНЕЦ: Стили контейнеров =============
 
@@ -238,7 +241,6 @@ h3
 //НАЧАЛО: Секции "отзывы и о нас" ===================
 .sec-reviews,
 .sec-about-us
-  padding-bottom: 200px
   font-family: 'Montserrat-Bold', sans-serif
   p 
     font-size: 22px
@@ -294,11 +296,27 @@ h3
 //НАЧАЛО: Секция с формой ===================
 
 .sec-form 
+  position: relative
+  padding: 200px 0 50px 
+  overflow: hidden
+  &::before
+    content: ' '
+    position: absolute
+    border-radius: 50%
+    background: $color-blue
+    z-index: -2
+    width: 1040px
+    height: 1040px
+    left: -232px
+    top: 142px
+    transform: rotate(-24.58deg)
   .col-2 
+    position: relative
     h2 
       padding: 0 0 75px 
     .link-brief
       padding: 254px 0 0 0
+      color: $color-white
       p 
         padding-bottom: 12px
       h2 
@@ -382,4 +400,41 @@ form
 
 //КОНЕЦ: Секция с формой ===================
 
-
+footer 
+  padding: 73px 0 55px
+  position: relative
+  &:before 
+    content: url('../img/group-img-footer.png')
+    position: absolute
+    bottom: 0
+    right: 561px
+  .col-footer-logo  
+    border-bottom: 1px solid rgba(16, 21, 125, 0.3)
+    padding-bottom: 10px
+    margin-bottom: 10px
+    .col-footer-logo__text 
+      padding: 8px 76px 0 0 
+      position: relative
+      font-weight: 600
+      font-size: 18px
+      &:before
+        content: ''
+        position: absolute
+        height: 48px
+        border-left: 2px solid #EB0089
+        left: -45px
+        top: 0
+  .col-footer-sprite
+    .block-sprite 
+      padding-top: 5px
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        top: -157px
+        right: 158px
+        width: 411px
+        height: 411px
+        border: 1px solid #10157D
+        border-radius: 50%
+        z-index: -1

@@ -1,25 +1,26 @@
 $(document).on( "ready", function(){  
   
   // Смена цвета иконок бокового меню при скролле
-  var target = $(".blue-circle-voucher");
-  var targetPos = target.offset().top;
+  var target1 = $(".blue-circle-voucher");
+  var target2 = $(".sec-form");
+  var targetPos1 = target1.offset().top;
+  var targetPos2 = target2.offset().top;
   var winHeight = $(window).height();
-  var scrollToElem = targetPos - winHeight;
+  var scrollToElem1 = targetPos1 - winHeight;
+  var scrollToElem2 = targetPos2 - winHeight;
   $(window).on("scroll", function () {
     var winScrollTop = $(this).scrollTop();
-    var winScrollBottom =
-      $(this).scrollTop() - $(window).height() - $(target).height();
-    if (winScrollTop > scrollToElem && winScrollBottom < scrollToElem) {
+    var winScrollBottom1 = $(this).scrollTop() - $(window).height() - $(target1).height();
+    var winScrollBottom2 = $(this).scrollTop() - $(window).height() - $(target2).height();
+    if (winScrollTop > scrollToElem1 && winScrollBottom1 < scrollToElem1 || winScrollTop > scrollToElem2) {
       $(".icon-svg").attr("class", "icon-svg active-color-svg");
-      // $(".icon-svg").addClass("active-color-svg");
       $(".decor-line, .navbar-toggler-icon").addClass("active-color");
     } else {
       $(".icon-svg").attr("class", "icon-svg");
-      // $(".icon-svg").removeClass("active-color-svg");
       $(".decor-line, .navbar-toggler-icon").removeClass("active-color");
     }
   });
-  
+ 
 
 
   // Слайдер

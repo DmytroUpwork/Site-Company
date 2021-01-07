@@ -1,8 +1,8 @@
-.tool_triangle {
+.decor-t {
   position: absolute;
 }
 
-.tool_triangle-1 {
+.decor-t-1 {
   width: 0;
   height: 0;
   border-left: 38px solid transparent;
@@ -14,8 +14,8 @@
   right: 31%;
 }
 
-.tool_triangle-2,
-.tool_triangle-3 {
+.decor-t-2,
+.decor-t-3 {
   width: 101px;
   height: 102px;
   overflow: hidden;
@@ -23,8 +23,8 @@
           box-shadow: 0 16px 9px -17px rgba(147, 192, 209, 0.7);
 }
 
-.tool_triangle-2:after,
-.tool_triangle-3:after {
+.decor-t-2:after,
+.decor-t-3:after {
   content: "";
   position: absolute;
   width: 50px;
@@ -32,30 +32,44 @@
   background: #fff;
 }
 
-.tool_triangle-2 {
+.decor-t-2:after {
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+  top: 79px;
+  left: 28px;
+  -webkit-box-shadow: -9px -6px 27px -2px rgba(147, 192, 209, 0.7);
+          box-shadow: -9px -6px 27px -2px rgba(147, 192, 209, 0.7);
+}
+
+.sec-services .decor-t-2 {
   -webkit-transform: rotate(-54deg);
           transform: rotate(-54deg);
   left: -88px;
   top: 350px;
 }
 
-.tool_triangle-2:after {
-  -webkit-transform: rotate(50deg);
-          transform: rotate(50deg);
-  top: 79px;
-  left: 28px;
-  -webkit-box-shadow: -9px -6px 27px -2px rgba(147, 192, 209, 0.7);
-          box-shadow: -9px -6px 27px -2px rgba(147, 192, 209, 0.7);
+.sec-form .decor-t-21 {
+  -webkit-transform: rotate(-188deg);
+          transform: rotate(-188deg);
+  right: 16px;
+  top: -2px;
 }
 
-.tool_triangle-3 {
+.sec-form .decor-t-22 {
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  right: 3px;
+  top: -160px;
+}
+
+.decor-t-3 {
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
   right: 24px;
   bottom: 270px;
 }
 
-.tool_triangle-3:after {
+.decor-t-3:after {
   -webkit-transform: rotate(50deg);
           transform: rotate(50deg);
   top: 79px;
@@ -64,7 +78,7 @@
           box-shadow: -9px -6px 27px -2px rgba(147, 192, 209, 0.7);
 }
 
-.tool_triangle-4 {
+.decor-t-4 {
   width: 0;
   height: 0;
   border-left: 9px solid transparent;
@@ -578,6 +592,11 @@ h3 {
   margin: 0 67px 0 auto;
 }
 
+.container-footer {
+  width: calc( 100% - 192px);
+  margin: 0 auto;
+}
+
 .card {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 33.333%;
@@ -761,7 +780,6 @@ h3 {
 
 .sec-reviews,
 .sec-about-us {
-  padding-bottom: 200px;
   font-family: 'Montserrat-Bold', sans-serif;
 }
 
@@ -829,12 +847,37 @@ h3 {
   z-index: -1;
 }
 
+.sec-form {
+  position: relative;
+  padding: 200px 0 50px;
+  overflow: hidden;
+}
+
+.sec-form::before {
+  content: ' ';
+  position: absolute;
+  border-radius: 50%;
+  background: #10157D;
+  z-index: -2;
+  width: 1040px;
+  height: 1040px;
+  left: -232px;
+  top: 142px;
+  -webkit-transform: rotate(-24.58deg);
+          transform: rotate(-24.58deg);
+}
+
+.sec-form .col-2 {
+  position: relative;
+}
+
 .sec-form .col-2 h2 {
   padding: 0 0 75px;
 }
 
 .sec-form .col-2 .link-brief {
   padding: 254px 0 0 0;
+  color: #fff;
 }
 
 .sec-form .col-2 .link-brief p {
@@ -949,5 +992,56 @@ form .form-row .form-control:hover {
 
 .form-check-label {
   padding-left: 15px;
+}
+
+footer {
+  padding: 73px 0 55px;
+  position: relative;
+}
+
+footer:before {
+  content: url("../img/group-img-footer.png");
+  position: absolute;
+  bottom: 0;
+  right: 561px;
+}
+
+footer .col-footer-logo {
+  border-bottom: 1px solid rgba(16, 21, 125, 0.3);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+footer .col-footer-logo .col-footer-logo__text {
+  padding: 8px 76px 0 0;
+  position: relative;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+footer .col-footer-logo .col-footer-logo__text:before {
+  content: '';
+  position: absolute;
+  height: 48px;
+  border-left: 2px solid #EB0089;
+  left: -45px;
+  top: 0;
+}
+
+footer .col-footer-sprite .block-sprite {
+  padding-top: 5px;
+  position: relative;
+}
+
+footer .col-footer-sprite .block-sprite:after {
+  content: '';
+  position: absolute;
+  top: -157px;
+  right: 158px;
+  width: 411px;
+  height: 411px;
+  border: 1px solid #10157D;
+  border-radius: 50%;
+  z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */

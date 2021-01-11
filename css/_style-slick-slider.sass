@@ -1,5 +1,6 @@
 .slick-slide
-  max-width: 646px
+  // max-width: 646px
+  // width: calc(305px + 1100 * ((100vw - 320px) / (1600 - 320)))
   .card-avatar 
     box-shadow: 9px 10px 30px rgba(147, 192, 209, 0.5)
     background: $color-white
@@ -31,20 +32,34 @@
           &:hover
             color: $color-pink
     p 
-      font-size: 24px
+      // font-size: 24px
       line-height: 29px
       margin-bottom: 26px
 
 .center-reviews
   .slick-slide
-    margin: 0 -80px
+    width: calc(480px + 150 * ((100vw - 1200px) / (1600 - 1200)))
+    margin-left: calc(-60px + -10 * ((100vw - 1200px) / (1600 - 1200)))
+    margin-right: calc(-60px + -10 * ((100vw - 1200px) / (1600 - 1200)))
+    @media screen and ( max-width: 1200px )
+      width: calc(305px + 800 * ((100vw - 320px) / (1600 - 320)))
+      margin: 0
     .card-avatar
       padding: 30px 36px
       margin: 70px 0
       .card-avatar__header
+        +d-flex-sb-ai-center
         margin-bottom: 50px
+        @media screen and ( max-width: 630px )
+          +d-flex-sb-column
+          margin-bottom: 20px
+
+
+
+
 .center-about-us
   .slick-slide
+    max-width: 646px
     margin: 0 -60px
     .card-avatar
       padding: 0 0 20px 0

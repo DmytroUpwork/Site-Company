@@ -19,12 +19,21 @@
 }
 
 .logo-company {
-  width: 216px;
+  width: calc(116px + 100 * ((100vw - 993px) / (1600 - 993)));
+  /* width: 216px; */
   height: 60px;
   fill: #241654;
   transition: .3s;
   cursor: pointer;
 }
+
+@media screen and (max-width: 992px) {
+  .logo-company {
+    width: 216px;
+  }
+}
+
+
 
 .logo-company:hover {
   fill: #EB0089;

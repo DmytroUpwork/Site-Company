@@ -1,5 +1,8 @@
 .decor-t 
   position: absolute 
+  @media screen and ( max-width: 992px )
+    display: none
+    
 .decor-t-1 
   width: 0
   height: 0
@@ -66,5 +69,9 @@
 .img-smoke-home
   position: absolute
   right: -34px
-  top: 0
+  top: -36px
   z-index: -1 
+  width: calc(790px + 240 * ((100vw - 992px) / (1600 - 992)))
+  @media screen and ( max-width: 992px )
+    display: none
+    

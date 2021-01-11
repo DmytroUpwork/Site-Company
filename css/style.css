@@ -322,13 +322,21 @@
           transform: rotate(90deg);
 }
 
+@media screen and (max-width: 635px) {
+  .menu-fixed .decor-line {
+    opacity: 0;
+    z-index: -9;
+  }
+}
+
 .menu-fixed .block-sprite .icon-svg {
   margin-bottom: 33px;
 }
 
 @media screen and (max-width: 635px) {
-  .menu-fixed {
-    display: none;
+  .menu-fixed .block-sprite {
+    opacity: 0;
+    z-index: -9;
   }
 }
 

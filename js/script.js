@@ -32,15 +32,16 @@ $(document).on( "ready", function(){
       $(".decor-line").attr("class", "decor-line active-animate-svg-top");
     }
     scroll = top;
-
-    // var height = $(window).scrollTop();
-    /*Если сделали скролл на 100px задаём новый класс для header*/
-    if (winScrollTop > 100) {
-      $(".navbar-toggler").attr("class", "navbar-toggler but-navbar-z-index");
+    if (window.innerWidth > 630) {
+      if (winScrollTop > 100) {
+        $(".navbar-toggler").attr("class", "navbar-toggler but-navbar-z-index");
+      } else {
+        $(".navbar-toggler").attr("class", "navbar-toggler");
+      }
     } else {
-      /*Если меньше 100px удаляем класс для header*/
-      $(".navbar-toggler").attr("class", "navbar-toggler");
+      $(".navbar-toggler").attr("class", "navbar-toggler but-navbar-z-index");
     }
+    
   });
 
   $(".navbar-toggler").on("click", function() {

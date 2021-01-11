@@ -49,11 +49,15 @@
     height: 1px
     background: $color-black
     transform: rotate(90deg)
+    @media screen and ( max-width: 635px )
+      opacity: 0
+      z-index: -9
   .block-sprite 
     .icon-svg
-      margin-bottom: 33px
-  @media screen and ( max-width: 635px )
-    display: none
+      margin-bottom: 33px    
+    @media screen and ( max-width: 635px )
+      opacity: 0
+      z-index: -9
 .navbar-toggler 
   margin: 8px 8px 0 8px
   border: none

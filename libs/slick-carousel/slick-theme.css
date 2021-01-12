@@ -21,20 +21,14 @@
 {
     font-size: 0;
     line-height: 0;
-
     position: absolute;
     top: 50%;
-
     display: block;
-
-    
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
-
     cursor: pointer;
-
     color: transparent;
     border: none;
     outline: none;
@@ -83,10 +77,7 @@
     font-family: 'slick';
     font-size: 20px;
     line-height: 1;
-
-    /* opacity: .75; */
     color: #EB0089;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -128,8 +119,6 @@
     left: auto;
 }
 
-
-
 .slick-prev:before
 {
     content: '';
@@ -137,7 +126,6 @@
     border-left: 1px solid #EB0089;
     border-top: 1px solid #EB0089;
     transform: rotate(-45deg);
-
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -158,15 +146,7 @@
     width: 10px;
     height: 10px;
     margin: 17px auto 17px 22px;
-
 }
-
-
-
-
-
-
-
 
 .slick-next
 {
@@ -195,9 +175,6 @@
     right: 0;
     left: auto;
 }
-
-
-
 
 .slick-next:before
 {
@@ -228,16 +205,6 @@
     margin: 20px auto 20px 19px;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* Dots */
 .slick-dotted.slick-slider
 {
@@ -248,45 +215,31 @@
 {
     position: absolute;
     bottom: -25px;
-
     display: block;
-
     width: 100%;
     padding: 0;
     margin: 0;
-
     list-style: none;
-
     text-align: center;
 }
-.slick-dots li
-{
+.slick-dots li {
     position: relative;
-
     display: inline-block;
-
-    width: 87px;
+    width: calc(30px + 40 * ((100vw - 320px) / (1600 - 320)));
     height: 20px;
     margin: 0 5px;
     padding: 0;
-
     cursor: pointer;
 }
 .slick-dots li button {
     font-size: 0;
     line-height: 0;
     display: block;
-    width: 97px;
+    width: calc(40px + 40 * ((100vw - 320px) / (1600 - 320)) );
     height: 0px;
-    /* padding: 5px; */
-    
     cursor: pointer;
-    /* color: transparent; */
-    
-    /* border-bottom: 1px; */
     outline: none;
     background: #000;
-    /* свои стили */
     border: none;
 }
 .slick-dots li button:hover,
@@ -304,20 +257,15 @@
     font-family: 'slick';
     font-size: 6px;
     line-height: 20px;
-
     position: absolute;
     top: 0;
     left: 0;
-
     width: 20px;
     height: 20px;
-
     content: '•';
     text-align: center;
-
     opacity: .25;
     color: black;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

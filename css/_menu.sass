@@ -1,6 +1,5 @@
 //НАЧАЛО: Меню верхнее ====================
 .container-menu
-  // width: calc(305px + 1100 * ((100vw - 320px) / (1600 - 320)))
   width: calc(305px + 1200 * ((100vw - 320px) / (1600 - 320)))
   margin-top: 36px
   margin-right: auto
@@ -24,8 +23,9 @@
           color: $color-black
           font-weight: 600
           &:hover 
-            color: $color-pink
-          
+            color: $color-pink   
+  .collapse-desktop
+    .navbar-nav
       @media screen and ( max-width: 992px )
         display: none
   
@@ -66,37 +66,48 @@
   height: 13px
   opacity: 0
   z-index: -9
-  &:hover .navbar-toggler-icon,
-  &:hover .navbar-toggler-icon:before,
-  &:hover .navbar-toggler-icon:after,
+  &:hover .navbar-toggler-line,
+  &:hover .navbar-toggler-line:before,
+  &:hover .navbar-toggler-line:after,
     background: $color-pink
-  &:hover .navbar-toggler-icon.active-color,
-  &:hover .navbar-toggler-icon.active-color:before,
-  &:hover .navbar-toggler-icon.active-color:after,
+  &:hover .navbar-toggler-line.active-color,
+  &:hover .navbar-toggler-line.active-color:before,
+  &:hover .navbar-toggler-line.active-color:after,
     background:  #81eb00!important
-  .navbar-toggler-icon 
+  .navbar-toggler-line 
     width: 15px
     height: 2px
     display: block
     background: $color-black
     transition: .2s
-    &:before,
-    &:after 
-      content: ' '
-      width: 15px
-      height: 2px
-      display: block
-      background: $color-black
-      position: absolute
-      transition: .2s
-    &:before 
-      top: 0
-    &:after 
-      bottom: 0
-  .navbar-toggler-icon.active-color
-    &:before,
-    &:after 
-      background: $color-pink
+  &:before,
+  &:after 
+    content: ' '
+    width: 15px
+    height: 2px
+    display: block
+    background: $color-black
+    position: absolute
+    transition: .2s
+  &:before 
+    top: 0
+  &:after 
+    bottom: 0
+.active-color
+  &:before,
+  &:after 
+    background: $color-pink
+.navbar-toggler-active
+  .navbar-toggler-line
+    opacity: 0
+  &:before  
+    // transition-delay: 0.5s
+    transform: translateY(5px) rotate(45deg) 
+    // transform: rotate(45deg)
+  &:after  
+    // transition-delay: 0.5s
+    transform: translateY(-5px) rotate(-45deg)
+    // transform: rotate(-45deg)
 
     
 .but-navbar-z-index

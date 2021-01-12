@@ -1,6 +1,5 @@
 $(document).on( "ready", function(){
-  // Смена цвета иконок бокового меню при скролле
-  
+  // Смена цвета иконок бокового меню при скролле 
   var target1 = $(".blue-circle-voucher");
   var target2 = $(".sec-form");
   var targetPos1 = target1.offset().top;
@@ -8,7 +7,6 @@ $(document).on( "ready", function(){
   var winHeight = $(window).height();
   var scrollToElem1 = targetPos1 - winHeight;
   var scrollToElem2 = targetPos2 - winHeight;
-
   $(window).on("scroll", function () {
     var winScrollTop = $(this).scrollTop();
     var winScrollBottom1 =
@@ -19,18 +17,19 @@ $(document).on( "ready", function(){
       (winScrollTop > scrollToElem1 && winScrollBottom1 < scrollToElem1 || winScrollTop > scrollToElem2 && winScrollBottom2 < scrollToElem2) 
     ) {
       $(".icon-svg").attr("class", "icon-svg active-color-svg");
-      $(".decor-line, .navbar-toggler-icon").addClass("active-color");
+      $(".decor-line, .navbar-toggler").attr("class", "navbar-toggler active-color");
     } else {
       $(".icon-svg").attr("class", "icon-svg");
-      $(".decor-line, .navbar-toggler-icon").removeClass("active-color");
+      $(".decor-line, .navbar-toggler").removeClass("active-color");
     }
-
+    // Анимация элемениа фиксированного меню
     var top = window.pageYOffset;
     if (scroll < top) {
       $(".decor-line").attr("class", "decor-line active-animate-svg-bottom");
     } else if (scroll > top) {
       $(".decor-line").attr("class", "decor-line active-animate-svg-top");
     }
+    // Появление и скрытие кнопки выпадающего меню
     scroll = top;
     if (window.innerWidth > 630) {
       if (winScrollTop > 100) {
@@ -40,14 +39,26 @@ $(document).on( "ready", function(){
       }
     } else {
       $(".navbar-toggler").attr("class", "navbar-toggler but-navbar-z-index");
+    } 
+  });
+  // Код закрытия и открытия меню при нажатии на элемент + его скрытие при клике на документ
+  $(".navbar-toggler").click(function (e) {
+    $(this).addClass("navbar-toggler-active");
+    var $menu_toggle = $(".menu-collapse");
+    if ($menu_toggle.attr("class", "menu-collapse")) {
+      $menu_toggle.addClass("menu-collapse-active");
+      var firstClick = true;
+      $(document).bind("click.myEvent", function (e) {
+        if (!firstClick && $(e.target).closest(".menu-collapse").length == 0) {
+          $menu_toggle.removeClass("menu-collapse-active");
+          $(".navbar-toggler").removeClass("navbar-toggler-active");
+          $(document).unbind("click.myEvent");
+        }
+        firstClick = false;
+      });
     }
-    
+    e.preventDefault();
   });
-
-  $(".navbar-toggler").on("click", function() {
-    $(".menu-collapse").toggleClass("menu-collapse-active");
-  });
-
   // Слайдер
   $(".center").slick({
     centerMode: true,
@@ -67,5 +78,6 @@ $(document).on( "ready", function(){
       },
     ],
   });
+
 });
 

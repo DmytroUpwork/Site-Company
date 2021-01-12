@@ -59,8 +59,12 @@
 
 .center-about-us
   .slick-slide
-    max-width: 646px
+    // max-width: 646px
+    width: calc(480px + 150 * ((100vw - 1200px) / (1600 - 1200)))
     margin: 0 -60px
+    @media screen and ( max-width: 992px )
+      width: calc(320px + 900 * ((100vw - 320px) / (1600 - 320)))
+      margin: 0
     .card-avatar
       padding: 0 0 20px 0
       margin: 20px 0 39px

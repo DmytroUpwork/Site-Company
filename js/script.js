@@ -17,10 +17,12 @@ $(document).on( "ready", function(){
       (winScrollTop > scrollToElem1 && winScrollBottom1 < scrollToElem1 || winScrollTop > scrollToElem2 && winScrollBottom2 < scrollToElem2) 
     ) {
       $(".icon-svg").attr("class", "icon-svg active-color-svg");
-      $(".decor-line, .navbar-toggler").attr("class", "navbar-toggler active-color");
+      $(".navbar-toggler").attr("class", "navbar-toggler active-color");
+      $(".decor-line").attr("class", "decor-line active-color");
     } else {
       $(".icon-svg").attr("class", "icon-svg");
-      $(".decor-line, .navbar-toggler").removeClass("active-color");
+      $(".navbar-toggler").attr("class", "navbar-toggler");
+      $(".decor-line").attr("class", "decor-line");
     }
     // Анимация элемениа фиксированного меню
     var top = window.pageYOffset;
@@ -30,15 +32,15 @@ $(document).on( "ready", function(){
       $(".decor-line").attr("class", "decor-line active-animate-svg-top");
     }
     // Появление и скрытие кнопки выпадающего меню
-    scroll = top;
-    if (window.innerWidth > 630) {
+    if (window.innerWidth > 992) {
       if (winScrollTop > 100) {
-        $(".navbar-toggler").attr("class", "navbar-toggler but-navbar-z-index");
+        $(".navbar-toggler").attr("class", "navbar-toggler t-navbar-toggler but-navbar-z-index");
       } else {
-        $(".navbar-toggler").attr("class", "navbar-toggler");
+        $(".navbar-toggler").attr("class", "navbar-toggler t-navbar-toggler");
       }
-    } else {
-      $(".navbar-toggler").attr("class", "navbar-toggler but-navbar-z-index");
+    } 
+    else {
+      $(".navbar-toggler").attr("class", "navbar-toggler t-navbar-toggler but-navbar-z-index");
     } 
   });
   // Код закрытия и открытия меню при нажатии на элемент + его скрытие при клике на документ

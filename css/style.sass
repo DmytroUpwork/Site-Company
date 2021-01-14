@@ -7,7 +7,9 @@
   justify-content: space-between
   flex-direction: column
   
-@import "_color", "_decor", "_link-effect", "_menu", "_style-slick-slider"
+@import "_color", "_menu", "_style-slick-slider", "_decor", "_link-effect"
+
+
 
 @font-face
   font-family: 'Montserrat'
@@ -21,6 +23,12 @@ body
   position: relative
   overflow: hidden  
   background: $color-white
+header 
+  @media screen and ( max-width: 992px )
+    position: fixed
+    z-index: 2
+    left: 0
+    right: 0
 h1 
   font-weight: 900
   width: calc(305px + 400 * ((100vw - 320px) / (1600 - 320)))
@@ -96,9 +104,10 @@ p
     left: 118px
     top: 820px
     background: rgba(235, 0, 137, 0.3)
-  @media screen and ( max-width: 632px )
+  @media screen and ( max-width: 992px )
     width: calc( 100% - 15px )
     margin: 0 auto 0 96px
+    padding-top: 150px
   @media screen and ( max-width: 632px )
     margin: 0 15px
     
@@ -135,7 +144,6 @@ p
 
 //НАЧАЛО: Карточки =====================
 .card 
-  
   flex: 0 0 33.333%
   max-width: 33%
   flex-wrap: wrap
@@ -145,13 +153,11 @@ p
   @media screen and ( max-width: 964px )
     flex: 0 0 100%
     max-width: 100%
-    
   .card-body
-    text-align: center   
+    text-align: center
     box-shadow: 9px 12px 40px #93C0D1
     border-radius: 50px
     background: $color-white
-
     .card-header 
       margin-bottom: 20px
       text-align: center
@@ -211,6 +217,8 @@ p
     background: $color-blue
     z-index: -2
     @media screen and ( max-width: 992px )
+      position: fixed
+      z-index: 2
       width: 100%
       height: 64px
       top: 0
@@ -248,7 +256,6 @@ p
           color: $color-blue   
           font-size: 24px
           min-height: 63px
-        
         a 
           background: $color-pink
           font-family: 'Montserrat-Bold', sans-serif
@@ -266,7 +273,6 @@ p
 
 //НАЧАЛО: Секция "Гарантии" ===================
 .sec-voucher 
-  // padding: 0 0 290px
   padding-bottom: calc( 73px + 217 * ((100vw - 320px) / (1600 - 320)) )
   position: relative
   .blue-circle-voucher 
@@ -363,15 +369,13 @@ p
   position: relative
   padding: 200px 0 50px 
   overflow: hidden
-  &::before
+  &:before
     content: ' '
     position: absolute
     border-radius: 50%
     background: $color-blue
     z-index: -2
-    // width: 1040px
     width: calc(670px + 350 * ((100vw - 993px) / (1600 - 993)))
-    // height: 1040px
     height: calc(670px + 350 * ((100vw - 993px) / (1600 - 993)))
     left: -232px
     top: 142px
@@ -432,7 +436,7 @@ form
       background-position: center center
       background-size: 60% 60%
       transition: .3s
-  &:checked+label::before
+  &:checked+label:before
     border: none
     background-color: $color-pink
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25)
@@ -460,8 +464,6 @@ form
   .input__file-button-text
     font-size: 18px
     font-weight: 600
-    
-
 .form-check-label 
   padding-left: 15px 
 
@@ -470,7 +472,6 @@ form
 
 
 //КОНЕЦ: Секция с формой ===================
-
 footer 
   padding: 73px 0 55px
   position: relative
@@ -509,33 +510,3 @@ footer
         border: 1px solid #10157D
         border-radius: 50%
         z-index: -1
-
-
-.menu-collapse 
-  position: fixed
-  transition: .3s
-  top: -400px
-  left: 100px
-  z-index: 99999
-.menu-collapse-active 
-  transform: translateY(461px)
-.navbar-collapse
-  background: $color-pink 
-  padding: 20px
-  border-radius: 10px
-
-  .nav-item:not(:last-child)
-    padding-bottom: 20px
-  
-
-
-
-
-
-
-
-
-
-
-
-

@@ -7,13 +7,16 @@
   margin-bottom: calc(80px + 93 * ((100vw - 632px) / (1600 - 632)))
   position: relative
   @media screen and ( max-width: 992px )
+    // position: fixed
     margin-top: 0
 .decor-1 
   position: absolute
   bottom: -28px
   left: 357px
 .navbar 
+  align-items: center
   @media screen and ( max-width: 632px )
+    align-items: normal
     flex-direction: column
   .collapse 
     .navbar-nav 
@@ -29,9 +32,30 @@
   .collapse-desktop
     @media screen and ( max-width: 992px )
       display: none
+  .phone-link-desk
+    @media screen and ( max-width: 992px )
+      display: none
+//КОНЕЦ: Меню верхнее ====================
+
+//НАЧАЛО: Выпадающее меню ===============
+.menu-collapse 
+  position: fixed
+  transition: .3s
+  top: -400px
+  left: 100px
+  z-index: 99999
+.menu-collapse-active 
+  transform: translateY(461px)
+.navbar-collapse
+  background: #00ebeb
+  padding: 20px
+  border-radius: 10px
+  .nav-item:not(:last-child)
+    padding-bottom: 20px
+//КОНЕЦ: Выпадающее меню ====================
   
       
-//КОНЕЦ: Меню верхнее ====================
+
   
   
 //НАЧАЛО: Боковое меню фиксированное ===========
@@ -44,6 +68,10 @@
   flex-direction: column
   justify-content: space-between
   z-index: 99999
+  @media screen and ( max-width: 992px )
+    top: 16px
+    left: 81%
+    right: 0
   .decor-line 
     display: block
     width: 40px
@@ -60,8 +88,33 @@
       opacity: 0
       z-index: -9
 
+
+.active-color-svg 
+  fill: $color-pink
+.active-color 
+  background: $color-pink !important
+.active-animate-svg-top
+  animation-duration: 1s
+  animation-name: slidein1
+@keyframes slidein1 
+  from 
+    transform: translateY(30px)
+    transform: rotate(90deg)
+  to 
+    transform: rotate(-90deg)
+.active-animate-svg-bottom
+  animation-duration: 1s
+  animation-name: slidein
+@keyframes slidein 
+  from
+    transform: translateY(-30px)
+    transform: rotate(-90deg)
+    
+
+
+
 // Не правильно компилирует transition-property, поэтому код прописан в css sprite.css ============
-/* Стили кнопки меню =========== */
+// Стили кнопки меню =========== 
 // .navbar-toggler 
 //   opacity: 0
 //   z-index: -9
@@ -79,7 +132,7 @@
 //   border: none
 //   cursor: pointer
 //   background: none
-  /* transition: background 0.3s */
+  // transition: background 0.3s 
   // &:focus 
   //   outline: none
 
@@ -106,7 +159,6 @@
   //     top: -7px
   //   &:after
   //     bottom: -7px
-  
 
 // Не правильно компилирует transition-property, поэтому код прописан в css sprite.css ============
 // .t-navbar-toggler 
@@ -132,37 +184,5 @@
 //       &:before,
 //       &:after
 //         transition-delay: 0s, 0.3s
-
-
-    
-.but-navbar-z-index
-  z-index: 9
-  opacity: 1
-        
-.active-color-svg 
-  fill: $color-pink
-.active-color 
-  background: $color-pink!important
-
-
-.active-animate-svg-bottom
-  animation-duration: 1s
-  animation-name: slidein
-@keyframes slidein 
-  from
-    transform: translateY(-30px)
-    transform: rotate(-90deg)
-.active-animate-svg-top
-  animation-duration: 1s
-  animation-name: slidein1
-
-@keyframes slidein1 
-  from 
-    transform: translateY(30px)
-    transform: rotate(180deg)
-
-
-
-
 
 //КОНЕЦ: Боковое меню фиксированное ===========

@@ -55,6 +55,16 @@
   background: none;
   /* transition: background 0.3s; */
 }
+@media screen and (max-width: 992px) {
+  .navbar-toggler {
+    opacity: 1;
+    z-index: 9;
+  }
+}
+.but-navbar-z-index {
+  z-index: 9;
+  opacity: 1;
+} 
 .navbar-toggler:focus {
   outline: none;
 }
@@ -67,16 +77,22 @@
   bottom: 0;
   margin: auto;
   height: 3px;
-  background: rgb(8, 6, 6);
+  background: #000;
 }
+
 .navbar-toggler span:before, .navbar-toggler span:after {
   position: absolute;
   display: block;
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: rgb(12, 9, 9);
+  background: #000;
   content: "";
+}
+.navbar-toggler span.active-color:before, .navbar-toggler span.active-color:after {
+  /* transition: background 0s 0.3s; */
+  background: #ff3264;
+  
 }
 .navbar-toggler span:before {
   top: -7px;
@@ -87,6 +103,21 @@
 /* .t-navbar-toggler {
   background-color: #ff3264;
 } */
+.t-navbar-toggler span.active-color {
+  transition: background 0s 0.3s;
+}
+.t-navbar-toggler span.active-color:before, .t-navbar-toggler span.active-color:after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+.t-navbar-toggler span.active-color:before {
+  transition-property: top, transform;
+}
+.t-navbar-toggler span.active-color:after {
+  transition-property: bottom, transform;
+}
+
+
 .t-navbar-toggler span {
   transition: background 0s 0.3s;
 }
@@ -108,6 +139,9 @@
 .t-navbar-toggler.navbar-toggler-active span {
   background: none;
 }
+.t-navbar-toggler.navbar-toggler-active span.active-color {
+  background: none !important;
+}
 .t-navbar-toggler.navbar-toggler-active span:before {
   top: 0;
   transform: rotate(45deg);
@@ -118,5 +152,14 @@
 }
 .t-navbar-toggler.navbar-toggler-active span:before, .t-navbar-toggler.navbar-toggler-active span:after {
   transition-delay: 0s, 0.3s;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-toggler span {
+    background: #fff;
+  }
+  .navbar-toggler span:before, .navbar-toggler span:after {
+    background: #fff;
+  }
 }
 

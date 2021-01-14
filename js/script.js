@@ -43,9 +43,14 @@ $(document).on( "ready", function(){
       var top = window.pageYOffset;
       if (scroll < top) {
         $(".decor-line").addClass("active-animate-svg-bottom");
+        $(".menu-collapse").removeClass("menu-collapse-active");
+        $(".navbar-toggler").removeClass("navbar-toggler-active");
       } else if (scroll > top) {
         $(".decor-line").addClass("active-animate-svg-top");
+        $(".menu-collapse").removeClass("menu-collapse-active");
+        $(".navbar-toggler").removeClass("navbar-toggler-active");
       }
+      
       scroll = top;
     }
 
@@ -55,27 +60,37 @@ $(document).on( "ready", function(){
     onScroll();
   });
 
+ 
+
 
 
 
   // Код закрытия и открытия меню при нажатии на элемент + его скрытие при клике на документ
-  $(".navbar-toggler").click(function (e) {
-    $(this).addClass("navbar-toggler-active");
-    var $menu_toggle = $(".menu-collapse");
-    if ($menu_toggle.attr("class", "menu-collapse")) {
-      $menu_toggle.addClass("menu-collapse-active");
-      var firstClick = true;
-      $(document).bind("click.myEvent", function (e) {
-        if (!firstClick && $(e.target).closest(".menu-collapse").length == 0) {
-          $menu_toggle.removeClass("menu-collapse-active");
-          $(".navbar-toggler").removeClass("navbar-toggler-active");
-          $(document).unbind("click.myEvent");
-        }
-        firstClick = false;
-      });
-    }
-    e.preventDefault();
-  });
+  function menuHideShow() {
+    $(".navbar-toggler").click(function (e) {
+      $(this).addClass("navbar-toggler-active");
+      var $menu_toggle = $(".menu-collapse");
+      if ($menu_toggle.attr("class", "menu-collapse")) {
+        $menu_toggle.addClass("menu-collapse-active");
+        var firstClick = true;
+        $(document).bind("click.myEvent", function (e) {
+          if (!firstClick && $(e.target).closest(".menu-collapse").length == 0) {
+            $menu_toggle.removeClass("menu-collapse-active");
+            $(".navbar-toggler").removeClass("navbar-toggler-active");
+            $(document).unbind("click.myEvent");
+          }
+          firstClick = false;
+        });
+      }
+      e.preventDefault();
+    });
+  };
+
+  menuHideShow();
+  
+
+
+  
   // Слайдер
   $(".center").slick({
     centerMode: true,
@@ -95,6 +110,12 @@ $(document).on( "ready", function(){
       },
     ],
   });
+
+
+
+
+
+
 
 });
 

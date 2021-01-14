@@ -80,9 +80,12 @@
 }
 
 .navbar-collapse {
-  background: #00ebeb;
+  background: #fff;
   padding: 20px;
+  border: 1px solid red;
   border-radius: 10px;
+  -webkit-box-shadow: 10px 17px 67px #93C0D1;
+          box-shadow: 10px 17px 67px #93C0D1;
 }
 
 .navbar-collapse .nav-item:not(:last-child) {

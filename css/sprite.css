@@ -119,7 +119,7 @@
 
 
 .t-navbar-toggler span {
-  transition: background 0s 0.3s;
+  transition: background 0.3s 0s;
 }
 .t-navbar-toggler span:before, .t-navbar-toggler span:after {
   transition-duration: 0.3s, 0.3s;

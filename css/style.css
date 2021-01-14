@@ -148,6 +148,8 @@
 
 .active-color {
   background: #EB0089 !important;
+  -webkit-transition: background .2s 0s !important;
+  transition: background .2s 0s !important;
 }
 
 .active-animate-svg-top {

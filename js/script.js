@@ -5,36 +5,29 @@ $(document).on( "ready", function(){
 
   $(window).on("scroll", function () {
 
-    var target1 = $(".blue-circle-voucher");
-    var target2 = $(".sec-form");
-    var targetPos1 = target1.offset().top;
-    var targetPos2 = target2.offset().top;
-    var winHeight = $(window).height();
-
     var winScrollTop = $(this).scrollTop();
-    var winScrollBottom1 = $(this).scrollTop() - winHeight - $(target1).height();
-    var winScrollBottom2 = $(this).scrollTop() - winHeight - $(target2).height();
-    
-    var scrollToElem1 = targetPos1 - winHeight;
-    var scrollToElem2 = targetPos2 - winHeight;
-
-    // var top = window.pageYOffset;
 
     function colorMenu() {
+      var target1 = $(".blue-circle-voucher");
+      var target2 = $(".sec-form");
+      var targetPos1 = target1.offset().top;
+      var targetPos2 = target2.offset().top;
+      var winHeight = $(window).height();
+      var winScrollBottom1 = $(this).scrollTop() - winHeight - $(target1).height();
+      var winScrollBottom2 = $(this).scrollTop() - winHeight - $(target2).height();
+      var scrollToElem1 = targetPos1 - winHeight;
+      var scrollToElem2 = targetPos2 - winHeight;
       if ( (winScrollTop > scrollToElem1 && winScrollBottom1 < scrollToElem1) || (winScrollTop > scrollToElem2 && winScrollBottom2 < scrollToElem2) ) {
         $(".icon-svg").attr("class", "icon-svg active-color-svg");
-        $(".navbar-toggler span").attr("class", "active-color");
+        $(".navbar-toggler span").addClass("active-color");
         $(".decor-line").attr("class", "decor-line active-color");
       } 
       else {
         $(".icon-svg").attr("class", "icon-svg");
-        $(".navbar-toggler span").attr("class", "");
+        $(".navbar-toggler span").removeClass("active-color");
         $(".decor-line").attr("class", "decor-line");
       }
     }
-    colorMenu();
-    
-    
     function butMenuHideShow() {
       if (window.innerWidth > 992) {
         if (winScrollTop > 100) {
@@ -42,26 +35,24 @@ $(document).on( "ready", function(){
         } else {
           $(".navbar-toggler").removeClass("but-navbar-z-index");
         }
+      } else {
+        $(".navbar-toggler span").attr("class", "");
       }
     }
-    butMenuHideShow();
-    
-
-    
     function onScroll() {
       var top = window.pageYOffset;
       if (scroll < top) {
         $(".decor-line").addClass("active-animate-svg-bottom");
       } else if (scroll > top) {
         $(".decor-line").addClass("active-animate-svg-top");
-      } 
+      }
       scroll = top;
     }
+
+    // Вызовы функций
+    colorMenu();
+    butMenuHideShow();
     onScroll();
-    
-    
-
-
   });
 
 

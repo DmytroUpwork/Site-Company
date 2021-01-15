@@ -531,6 +531,13 @@
   border-radius: 100px;
 }
 
+@media screen and (max-width: 450px) {
+  .btn-contact-us {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+}
+
 .btn-contact-us .btn-gradient {
   position: absolute;
   z-index: -1;
@@ -683,6 +690,12 @@ h1 {
   font-size: calc(27px + 37 * ((100vw - 320px) / (1600 - 320)));
 }
 
+@media screen and (max-width: 992px) {
+  h1 {
+    margin-bottom: 22px;
+  }
+}
+
 h2 {
   font-weight: 900;
   font-family: 'Montserrat-Bold', sans-serif;
@@ -692,7 +705,7 @@ h2 {
 h3 {
   font-weight: 300;
   max-width: 418px;
-  margin-bottom: calc(44px + 46 * ((100vw - 320px) / (1600 - 320)));
+  margin-bottom: calc(23px + 46 * ((100vw - 320px) / (1600 - 320)));
   font-family: 'Montserrat-Light', sans-serif;
   font-size: calc(20px + 16 * ((100vw - 320px) / (1600 - 320)));
 }
@@ -868,13 +881,13 @@ p {
 }
 
 .container-form {
-  width: calc(305px + 1100 * ((100vw - 320px) / (1600 - 320)));
+  width: calc(320px + 1100 * ((100vw - 320px) / (1600 - 320)));
   margin: 0 67px 0 auto;
 }
 
 @media screen and (max-width: 635px) {
   .container-form {
-    margin: 0;
+    margin: 0 auto;
   }
 }
 
@@ -1311,6 +1324,13 @@ form .form-row .col-2 {
   padding: 0 30px;
 }
 
+@media screen and (max-width: 992px) {
+  form .form-row .col-1,
+  form .form-row .col-2 {
+    padding: 24px 0;
+  }
+}
+
 form .form-row .form-control {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   border-top: none;
@@ -1329,6 +1349,16 @@ form .form-row .form-control:hover {
 
 .btn-submit {
   margin: 0 40px 0 50px;
+}
+
+@media screen and (max-width: 992px) {
+  .btn-submit {
+    margin: 0 20px 0 0;
+  }
+}
+
+.info-person {
+  font-size: calc(10px + 5 * ((100vw - 320px) / (1600 - 320)));
 }
 
 .form-check-input {

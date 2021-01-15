@@ -67,6 +67,8 @@ p
   flex-direction: column
 .block-card
   margin: 0 0 123px 56px
+  @media screen and ( max-width: 992px)
+    margin: 0 0 45px
 .col-1 
   width: 100%
 .col-2 
@@ -96,6 +98,8 @@ p
     border: 1px solid $color-blue-shadow
     border-radius: 50%
     z-index: -1
+    @media screen and ( max-width: 992px )
+      display: none
   &:after 
     content: ' '
     position: absolute
@@ -126,7 +130,7 @@ p
 .container-about-us 
   width: calc( 100% - 160px)
   margin: 0 12px 0 auto
-  @media screen and ( max-width: 634px )
+  @media screen and ( max-width: 992px )
     width: calc( 100% - 15px)
     margin: 0 auto
     
@@ -330,6 +334,8 @@ p
     position: absolute
     bottom: -48px
     left: -50px
+    @media screen and ( max-width: 992px )
+      display: none
   &:after 
     content: ''
     width: 0
@@ -341,6 +347,8 @@ p
     top: 143px
     right: 232px
     position: absolute
+    @media screen and ( max-width: 992px )
+      display: none
 .about-us__col-2
   position: relative
   &:before 
@@ -348,6 +356,8 @@ p
     position: absolute
     top: -58px
     right: 0
+    @media screen and ( max-width: 992px )
+      display: none
   &:after 
     content: ''
     position: absolute
@@ -358,6 +368,8 @@ p
     border: 1px solid #10157D
     border-radius: 50%
     z-index: -1
+    @media screen and ( max-width: 992px )
+      display: none
 //КОНЕЦ: Секции "отзывы и о нас" ===================
 
 
@@ -383,7 +395,7 @@ p
       border-radius: 0
       width: 100%
       height: 300px
-      top: 400px
+      top: 154px
       left: 0
   .col-2 
     position: relative
@@ -396,11 +408,16 @@ p
         padding-bottom: 12px
       h2 
         font-size: calc(26px + 38 * ((100vw - 320px) / (1600 - 320)))
+      @media screen and ( max-width: 992px )
+        padding: 0 0 100px 0
+        
 
   
 form
   .form-row 
     margin: 0 -30px 60px 
+    @media screen and ( max-width: 992px )
+      margin: 0
     .col-1,
     .col-2 
       padding: 0 30px
@@ -449,6 +466,11 @@ form
     opacity: 0
     visibility: hidden
   label 
+    @media screen and ( max-width: 992px )
+      width: 100%
+      padding: 20px 0
+      display: flex
+      justify-content: flex-end
     .input__file-icon-wrapper 
       .icon-card 
         position: absolute
@@ -457,6 +479,9 @@ form
         width: 45px
         height: 45px
         transition: .3s
+        @media screen and ( max-width: 992px )
+          position: relative
+    
   &:hover .icon-card 
     fill: $color-pink
 .input__file-button
@@ -480,6 +505,8 @@ footer
     position: absolute
     bottom: 0
     right: 561px
+    @media screen and ( max-width: 992px )
+      display: none
   .col-footer-logo  
     border-bottom: 1px solid rgba(16, 21, 125, 0.3)
     padding-bottom: 10px
@@ -496,6 +523,8 @@ footer
         border-left: 2px solid #EB0089
         left: -45px
         top: 0
+        @media screen and ( max-width: 992px )
+          display: none
   .col-footer-sprite
     .block-sprite 
       padding-top: 5px
@@ -510,3 +539,5 @@ footer
         border: 1px solid #10157D
         border-radius: 50%
         z-index: -1
+        @media screen and ( max-width: 992px )
+          display: none

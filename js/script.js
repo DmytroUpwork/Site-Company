@@ -1,8 +1,6 @@
 $(document).on( "ready", function(){
   // Смена цвета иконок бокового меню при скролле 
   
-
-
   $(window).on("scroll", function () {
 
     var winScrollTop = $(this).scrollTop();
@@ -39,20 +37,75 @@ $(document).on( "ready", function(){
         $(".navbar-toggler span").attr("class", "");
       }
     }
+
+
+
+
+
     function onScroll() {
       var top = window.pageYOffset;
       if (scroll < top) {
         $(".decor-line").addClass("active-animate-svg-bottom");
-        $(".menu-collapse").removeClass("menu-collapse-active");
-        $(".navbar-toggler").removeClass("navbar-toggler-active");
       } else if (scroll > top) {
         $(".decor-line").addClass("active-animate-svg-top");
-        $(".menu-collapse").removeClass("menu-collapse-active");
-        $(".navbar-toggler").removeClass("navbar-toggler-active");
       }
-      
       scroll = top;
     }
+
+
+
+
+
+    // function onScroll() {
+    //   var top = window.pageYOffset;
+    //   if (scroll < top) {
+    //     $(".decor-line").addClass("active-animate-svg-bottom");
+    //     $(".menu-collapse").removeClass("menu-collapse-active");
+    //     // $(".navbar-toggler").removeClass("navbar-toggler-active");
+    //   } else if (scroll > top) {
+    //     $(".decor-line").addClass("active-animate-svg-top");
+    //     $(".menu-collapse").removeClass("menu-collapse-active");
+    //     // $(".navbar-toggler").removeClass("navbar-toggler-active");
+    //   }
+    //   scroll = top;
+    //   $(".navbar-toggler").click(function (e) {
+    //     $(this).addClass("navbar-toggler-active");
+
+    //     var $menu_toggle = $(".menu-collapse");
+
+    //     if ($menu_toggle.attr("class", "menu-collapse")) {
+    //       $menu_toggle.addClass("menu-collapse-active");
+
+    //       var firstClick = true;
+    //       $(document).bind("click.myEvent", function (e) {
+    //         if (!firstClick && $(e.target).closest(".menu-collapse").length == 0) {
+    //           $menu_toggle.removeClass("menu-collapse-active");
+    //           $(".navbar-toggler").removeClass("navbar-toggler-active");
+    //           $(document).unbind("click.myEvent");
+    //         }
+    //         firstClick = false;
+    //       });
+    //     }
+
+    //     e.preventDefault();
+    //   });
+    // }
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
 
     // Вызовы функций
     colorMenu();
@@ -60,18 +113,17 @@ $(document).on( "ready", function(){
     onScroll();
   });
 
- 
-
-
-
 
   // Код закрытия и открытия меню при нажатии на элемент + его скрытие при клике на документ
   function menuHideShow() {
     $(".navbar-toggler").click(function (e) {
       $(this).addClass("navbar-toggler-active");
+      
       var $menu_toggle = $(".menu-collapse");
+
       if ($menu_toggle.attr("class", "menu-collapse")) {
         $menu_toggle.addClass("menu-collapse-active");
+
         var firstClick = true;
         $(document).bind("click.myEvent", function (e) {
           if (!firstClick && $(e.target).closest(".menu-collapse").length == 0) {
@@ -81,7 +133,10 @@ $(document).on( "ready", function(){
           }
           firstClick = false;
         });
+        
+
       }
+
       e.preventDefault();
     });
   };

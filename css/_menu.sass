@@ -13,6 +13,9 @@
   position: absolute
   bottom: -28px
   left: 357px
+  @media screen and ( max-width: 992px )
+    display: none
+    
 .navbar 
   align-items: center
   @media screen and ( max-width: 632px )
@@ -41,9 +44,13 @@
 .menu-collapse 
   position: fixed
   transition: .3s
-  top: -400px
+  top: -450px
   left: 100px
   z-index: 99999
+  @media screen and ( max-width: 992px )
+    top: -397px
+    width: 100%
+    left: 0
 .menu-collapse-active 
   transform: translateY(461px)
 .navbar-collapse
@@ -52,8 +59,18 @@
   border: 1px solid red
   border-radius: 10px
   box-shadow: 10px 17px 67px #93C0D1
-  .nav-item:not(:last-child)
-    padding-bottom: 20px
+  .nav-item
+    padding-top: 40px
+    text-transform: uppercase
+  .logo 
+    @media screen and ( max-width: 992px )
+      display: none
+  .phone-link 
+    @media screen and ( max-width: 992px )
+      +d-flex-sb-ai-center
+    .phone-link__tel-menu
+      color: $color-pink
+      
 //КОНЕЦ: Выпадающее меню ====================
   
       
@@ -72,8 +89,10 @@
   z-index: 99999
   @media screen and ( max-width: 992px )
     top: 16px
-    left: 81%
+    left: 92%
     right: 0
+    z-index: 3
+    
   .decor-line 
     display: block
     width: 40px
@@ -83,6 +102,9 @@
     @media screen and ( max-width: 992px )
       opacity: 0
       z-index: -9
+  .navbar-toggler
+    @media screen and ( max-width: 992px )
+      position: absolute
   .block-sprite 
     .icon-svg
       margin-bottom: 33px    

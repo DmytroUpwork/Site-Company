@@ -44,7 +44,7 @@
 .menu-collapse 
   position: fixed
   transition: .3s
-  top: -450px
+  top: -480px
   left: 100px
   z-index: 99999
   @media screen and ( max-width: 992px )
@@ -52,7 +52,9 @@
     width: 100%
     left: 0
 .menu-collapse-active 
-  transform: translateY(461px)
+  transform: translateY(539px)
+  @media screen and ( max-width: 992px)
+    transform: translateY(461px)
 .navbar-collapse
   background: #fff
   padding: 20px
@@ -68,8 +70,12 @@
   .phone-link 
     @media screen and ( max-width: 992px )
       +d-flex-sb-ai-center
+    @media screen and ( max-width: 397px )
+      +d-flex-sb-column
     .phone-link__tel-menu
       color: $color-pink
+      @media screen and ( max-width: 397px )
+       margin: 0 0 20px
       
 //КОНЕЦ: Выпадающее меню ====================
   
@@ -89,7 +95,7 @@
   z-index: 99999
   @media screen and ( max-width: 992px )
     top: 16px
-    left: 92%
+    left: calc(100% - 60px)
     right: 0
     z-index: 3
     

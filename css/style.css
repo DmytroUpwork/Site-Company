@@ -949,8 +949,8 @@ p {
 }
 
 .container-footer {
-  width: calc( 100% - 192px);
-  margin: 0 auto;
+  width: calc(320px + 1100 * ((100vw - 320px) / (1600 - 320)));
+  margin: 0 15px;
 }
 
 .card {
@@ -1395,7 +1395,7 @@ form .form-row .form-control {
   border-right: none;
   width: 100%;
   padding: 20px 0;
-  font-size: 24px;
+  font-size: calc(14px + 10 * ((100vw - 320px) / (1600 - 320)));
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }

@@ -146,8 +146,8 @@ p
   @media screen and ( max-width: 635px )
     margin: 0 auto
 .container-footer
-  width: calc( 100% - 192px)
-  margin: 0 auto
+  width: calc(320px + 1100 * ((100vw - 320px) / (1600 - 320)))
+  margin: 0 15px
 
 // КОНЕЦ: Стили контейнеров =============
 
@@ -435,7 +435,7 @@ form
       border-right: none
       width: 100%
       padding: 20px 0
-      font-size: 24px
+      font-size: calc(14px + 10 * ((100vw - 320px) / (1600 - 320)))
       transition: 0.3s
       &:hover 
         border-bottom: 1px solid $color-pink

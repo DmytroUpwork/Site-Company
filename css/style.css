@@ -351,11 +351,29 @@
   font-family: 'Montserrat-Bold', sans-serif;
 }
 
+.slick-slide .card-avatar .card-avatar__header .card-avatar__header_photo {
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  .slick-slide .card-avatar .card-avatar__header .card-avatar__header_photo {
+    width: 100%;
+  }
+}
+
 .slick-slide .card-avatar .card-avatar__header .card-avatar__header_photo .card-avatar__header_photoimg {
   min-width: 107px;
   height: 107px;
   overflow: hidden;
   position: relative;
+}
+
+@media screen and (max-width: 640px) {
+  .slick-slide .card-avatar .card-avatar__header .card-avatar__header_photo .card-avatar__header_photoimg {
+    min-width: 67px;
+    height: 67px;
+  }
 }
 
 .slick-slide .card-avatar .card-avatar__header .card-avatar__header_photo .card-avatar__header_photoimg img {
@@ -375,10 +393,23 @@
   padding-left: 21px;
 }
 
+@media screen and (max-width: 640px) {
+  .slick-slide .card-avatar .card-avatar__header .card-avatar__header_photo .card-avatar__header_name {
+    font-size: 16px;
+  }
+}
+
 .slick-slide .card-avatar .card-avatar__header .card-avatar__header_title {
   font-size: 18px;
   line-height: 22px;
   color: #10CFFC;
+  width: 30%;
+}
+
+@media screen and (max-width: 640px) {
+  .slick-slide .card-avatar .card-avatar__header .card-avatar__header_title {
+    width: 100%;
+  }
 }
 
 .slick-slide .card-avatar .card-avatar__header .card-avatar__header_title span {
@@ -393,6 +424,12 @@
 .slick-slide .card-avatar p {
   line-height: 29px;
   margin-bottom: 26px;
+}
+
+@media screen and (max-width: 640px) {
+  .slick-slide .card-avatar p {
+    line-height: 22px;
+  }
 }
 
 .center-reviews .slick-slide {
@@ -411,6 +448,12 @@
 .center-reviews .slick-slide .card-avatar {
   padding: 30px 36px;
   margin: 70px 0;
+}
+
+@media screen and (max-width: 992px) {
+  .center-reviews .slick-slide .card-avatar {
+    padding: 12px 12px 29px;
+  }
 }
 
 .center-reviews .slick-slide .card-avatar .card-avatar__header {
@@ -588,7 +631,7 @@
   border-radius: 100px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 640px) {
   .btn-contact-us {
     font-size: 16px;
     padding: 8px 20px;
@@ -726,7 +769,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
   position: relative;
-  overflow: hidden;
   background: #fff;
 }
 
@@ -756,7 +798,7 @@ h1 {
 h2 {
   font-weight: 900;
   font-family: 'Montserrat-Bold', sans-serif;
-  font-size: calc(23px + 25 * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(25px + 25 * ((100vw - 320px) / (1600 - 320)));
 }
 
 h3 {
@@ -768,7 +810,7 @@ h3 {
 }
 
 p {
-  font-size: calc(12px + 14 * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(14px + 7 * ((100vw - 320px) / (1600 - 320)));
 }
 
 .row {
@@ -902,7 +944,7 @@ p {
 }
 
 .container-card {
-  width: calc(305px + 1100 * ((100vw - 320px) / (1600 - 320)));
+  width: calc(290px + 1100 * ((100vw - 320px) / (1600 - 320)));
   margin: 0 auto;
   position: relative;
 }
@@ -949,7 +991,7 @@ p {
 }
 
 .container-footer {
-  width: calc(320px + 1100 * ((100vw - 320px) / (1600 - 320)));
+  width: calc(290px + 1100 * ((100vw - 320px) / (1600 - 320)));
   margin: 0 15px;
 }
 
@@ -1065,6 +1107,7 @@ p {
 .sec-home {
   padding-bottom: calc( 73px + 227 * ((100vw - 320px) / (1600 - 320)));
   position: relative;
+  overflow: hidden;
 }
 
 .sec-home:before {
@@ -1090,6 +1133,12 @@ p {
     top: 0;
     left: 0;
     border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sec-home {
+    background: #fb00ff52;
   }
 }
 
@@ -1175,6 +1224,12 @@ p {
   position: relative;
 }
 
+@media screen and (max-width: 992px) {
+  .sec-voucher {
+    background: #00bcd44a;
+  }
+}
+
 .sec-voucher .blue-circle-voucher {
   position: absolute;
   border-radius: 50%;
@@ -1237,6 +1292,12 @@ p {
 .sec-about-us h3 {
   margin: 24px auto 53px;
   text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .sec-about-us {
+    background: #fb00ff52;
+  }
 }
 
 .about-us__col-1 {
@@ -1538,11 +1599,23 @@ footer .col-footer-logo {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 992px) {
+  footer .col-footer-logo .col-footer-logo__logo {
+    display: none;
+  }
+}
+
 footer .col-footer-logo .col-footer-logo__text {
   padding: 8px 76px 0 0;
   position: relative;
   font-weight: 600;
   font-size: 18px;
+}
+
+@media screen and (max-width: 992px) {
+  footer .col-footer-logo .col-footer-logo__text {
+    padding: 0;
+  }
 }
 
 footer .col-footer-logo .col-footer-logo__text:before {

@@ -5,11 +5,18 @@
     font-family: 'Montserrat-Bold', sans-serif
     .card-avatar__header 
       .card-avatar__header_photo
+        width: 70%
+        margin-bottom: 20px
+        @media screen and ( max-width: 640px )
+          width: 100%
         .card-avatar__header_photoimg
           min-width: 107px
           height: 107px
           overflow: hidden
           position: relative
+          @media screen and ( max-width: 640px )
+            min-width: 67px
+            height: 67px
           img 
             position: absolute
             width: 100%
@@ -21,18 +28,28 @@
           color: #000
           font-weight: bold
           padding-left: 21px
+          @media screen and ( max-width: 640px )
+            font-size: 16px
       .card-avatar__header_title 
         font-size: 18px
         line-height: 22px
         color: #10CFFC
+        width: 30%
+        @media screen and ( max-width: 640px )
+          width: 100%
         span
           transition: .3s
+          // display: flex
           &:hover
             color: $color-pink
+          // @media screen and ( max-width: 640px )
+          //   justify-content: flex-start
     p 
       // font-size: 24px
       line-height: 29px
       margin-bottom: 26px
+      @media screen and ( max-width: 640px )
+        line-height: 22px
 
 .center-reviews
   .slick-slide
@@ -45,6 +62,8 @@
     .card-avatar
       padding: 30px 36px
       margin: 70px 0
+      @media screen and ( max-width: 992px )
+        padding: 12px 12px 29px
       .card-avatar__header
         +d-flex-sb-ai-center
         margin-bottom: 50px

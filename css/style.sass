@@ -26,7 +26,7 @@
 body 
   font-family: 'Montserrat', sans-serif
   position: relative
-  overflow: hidden  
+  // overflow-x: hidden  
   background: $color-white
 header 
   @media screen and ( max-width: 992px )
@@ -45,7 +45,7 @@ h1
 h2 
   font-weight: 900
   font-family: 'Montserrat-Bold', sans-serif
-  font-size: calc(23px + 25 * ((100vw - 320px) / (1600 - 320)))
+  font-size: calc(25px + 25 * ((100vw - 320px) / (1600 - 320)))
 h3 
   font-weight: 300
   max-width: 418px
@@ -54,7 +54,7 @@ h3
   font-family: 'Montserrat-Light', sans-serif
   font-size: calc(20px + 16 * ((100vw - 320px) / (1600 - 320)))
 p 
-  font-size: calc(12px + 14 * ((100vw - 320px) / (1600 - 320)))
+  font-size: calc(14px + 7 * ((100vw - 320px) / (1600 - 320)))
 .row 
   flex-wrap: wrap
 .d-flex 
@@ -122,7 +122,7 @@ p
     margin: 0 15px
     
 .container-card 
-  width: calc(305px + 1100 * ((100vw - 320px) / (1600 - 320)))
+  width: calc(290px + 1100 * ((100vw - 320px) / (1600 - 320)))
   margin: 0 auto
   position: relative
 .container-voucher 
@@ -146,7 +146,7 @@ p
   @media screen and ( max-width: 635px )
     margin: 0 auto
 .container-footer
-  width: calc(320px + 1100 * ((100vw - 320px) / (1600 - 320)))
+  width: calc(290px + 1100 * ((100vw - 320px) / (1600 - 320)))
   margin: 0 15px
 
 // КОНЕЦ: Стили контейнеров =============
@@ -214,6 +214,7 @@ p
 .sec-home 
   padding-bottom: calc( 73px + 227 * ((100vw - 320px) / (1600 - 320)) )
   position: relative
+  overflow: hidden
   &:before
     content: ''
     width: calc(410px + 337 * ((100vw - 632px) / (1600 - 632)))
@@ -234,8 +235,8 @@ p
       left: 0
       border-radius: 0
       
-    // @media screen and ( max-width: 632px )
-    //   display: none
+  @media screen and ( max-width: 992px )
+    background: #fb00ff52
       
 //КОНЕЦ: Секция Главная ===================
 
@@ -284,6 +285,8 @@ p
 .sec-voucher 
   padding-bottom: calc( 73px + 217 * ((100vw - 320px) / (1600 - 320)) )
   position: relative
+  @media screen and ( max-width: 992px )
+    background: #00bcd44a
   .blue-circle-voucher 
     position: absolute
     border-radius: 50%
@@ -331,6 +334,8 @@ p
   h3 
     margin: 24px auto 53px
     text-align: center
+  @media screen and ( max-width: 992px )
+    background: #fb00ff52
 // Декорации =================
 .about-us__col-1
   position: relative
@@ -523,11 +528,16 @@ footer
     border-bottom: 1px solid rgba(16, 21, 125, 0.3)
     padding-bottom: 10px
     margin-bottom: 10px
+    .col-footer-logo__logo 
+      @media screen and ( max-width: 992px )
+        display: none
     .col-footer-logo__text 
       padding: 8px 76px 0 0 
       position: relative
       font-weight: 600
       font-size: 18px
+      @media screen and ( max-width: 992px )
+        padding: 0
       &:before
         content: ''
         position: absolute

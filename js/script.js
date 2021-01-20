@@ -84,6 +84,11 @@ $(document).on( "ready", function(){
           }
           firstClick = false;
         });
+        $(".nav-link").on("click", function () {
+          $menu_toggle.removeClass("menu-collapse-active");
+          $(".navbar-toggler").removeClass("navbar-toggler-active");
+          $(document).unbind("click.myEvent");
+        })
       }
       e.preventDefault();
     });

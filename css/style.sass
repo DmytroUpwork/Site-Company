@@ -94,18 +94,6 @@ p
 .container-body 
   width: calc( 100% - 285px )
   margin: 0 auto
-  &:before 
-    content: ' '
-    position: absolute
-    width: 814px
-    height: 814px
-    left: -310px
-    top: 552px
-    border: 1px solid $color-blue-shadow
-    border-radius: 50%
-    z-index: -1
-    @media screen and ( max-width: 992px )
-      display: none
   &:after 
     content: ' '
     position: absolute
@@ -243,6 +231,18 @@ p
 //НАЧАЛО: Секция "Услуги" ===================
 .sec-services
   padding-bottom: calc( 73px + 77 * ((100vw - 320px) / (1600 - 320)) )
+  &:before 
+    content: ' '
+    position: absolute
+    width: 814px
+    height: 814px
+    left: -310px
+    top: 552px
+    border: 1px solid $color-blue-shadow
+    border-radius: 50%
+    z-index: -1
+    @media screen and ( max-width: 992px )
+      display: none
   .card-services
     padding: 0 46px 42px
     @media screen and ( max-width: 510px )

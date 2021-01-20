@@ -901,24 +901,6 @@ p {
   margin: 0 auto;
 }
 
-.container-body:before {
-  content: ' ';
-  position: absolute;
-  width: 814px;
-  height: 814px;
-  left: -310px;
-  top: 552px;
-  border: 1px solid rgba(16, 21, 125, 0.3);
-  border-radius: 50%;
-  z-index: -1;
-}
-
-@media screen and (max-width: 992px) {
-  .container-body:before {
-    display: none;
-  }
-}
-
 .container-body:after {
   content: ' ';
   position: absolute;
@@ -1144,6 +1126,24 @@ p {
 
 .sec-services {
   padding-bottom: calc( 73px + 77 * ((100vw - 320px) / (1600 - 320)));
+}
+
+.sec-services:before {
+  content: ' ';
+  position: absolute;
+  width: 814px;
+  height: 814px;
+  left: -310px;
+  top: 552px;
+  border: 1px solid rgba(16, 21, 125, 0.3);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@media screen and (max-width: 992px) {
+  .sec-services:before {
+    display: none;
+  }
 }
 
 .sec-services .card-services {

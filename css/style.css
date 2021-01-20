@@ -344,6 +344,33 @@
   }
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 34%;
+  left: 35%;
+  z-index: 9999999;
+  width: 400px;
+  background: #fff;
+  border-radius: 19px;
+  -webkit-box-shadow: 9px 12px 40px #93C0D1;
+          box-shadow: 9px 12px 40px #93C0D1;
+  padding: 20px;
+  text-align: center;
+}
+
+.modal a {
+  width: 100%;
+}
+
+.modal a:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.active-modal {
+  display: block;
+}
+
 .slick-slide .card-avatar {
   -webkit-box-shadow: 9px 10px 30px rgba(147, 192, 209, 0.5);
           box-shadow: 9px 10px 30px rgba(147, 192, 209, 0.5);
@@ -453,6 +480,7 @@
 @media screen and (max-width: 992px) {
   .center-reviews .slick-slide .card-avatar {
     padding: 12px 12px 29px;
+    margin: 0;
   }
 }
 
@@ -867,7 +895,7 @@ p {
 
 @media screen and (max-width: 992px) {
   .block-card {
-    margin: 0 0 45px;
+    margin: 0 0 25px;
   }
 }
 
@@ -1125,6 +1153,7 @@ p {
 }
 
 .sec-services {
+  padding-top: 30px;
   padding-bottom: calc( 73px + 77 * ((100vw - 320px) / (1600 - 320)));
 }
 
@@ -1220,6 +1249,7 @@ p {
 }
 
 .sec-voucher {
+  padding-top: 30px;
   padding-bottom: calc( 73px + 217 * ((100vw - 320px) / (1600 - 320)));
   position: relative;
 }
@@ -1277,6 +1307,7 @@ p {
 .sec-reviews,
 .sec-about-us {
   font-family: 'Montserrat-Bold', sans-serif;
+  padding: 30px 0 57px 0;
 }
 
 .sec-reviews p,
@@ -1378,6 +1409,12 @@ p {
   overflow: hidden;
 }
 
+@media screen and (max-width: 992px) {
+  .sec-form {
+    padding: 30px 0 50px;
+  }
+}
+
 .sec-form:before {
   content: ' ';
   position: absolute;
@@ -1394,8 +1431,8 @@ p {
   .sec-form:before {
     border-radius: 0;
     width: 100%;
-    height: 300px;
-    top: 154px;
+    height: 252px;
+    top: 0;
     left: 0;
   }
 }
@@ -1408,6 +1445,12 @@ p {
   padding: 0 0 75px;
 }
 
+@media screen and (max-width: 640px) {
+  .sec-form .col-2 h2 {
+    padding: 0 0 42px;
+  }
+}
+
 .sec-form .col-2 .link-brief {
   padding: 254px 0 0 0;
   color: #fff;
@@ -1417,13 +1460,19 @@ p {
   padding-bottom: 12px;
 }
 
+@media screen and (max-width: 640px) {
+  .sec-form .col-2 .link-brief p {
+    padding-bottom: 25px;
+  }
+}
+
 .sec-form .col-2 .link-brief h2 {
   font-size: calc(26px + 38 * ((100vw - 320px) / (1600 - 320)));
 }
 
 @media screen and (max-width: 992px) {
   .sec-form .col-2 .link-brief {
-    padding: 0 0 100px 0;
+    padding: 0 0 70px 0;
   }
 }
 

@@ -12,7 +12,7 @@
   justify-content: space-between
   flex-direction: column
   
-@import "_color", "_menu", "_style-slick-slider", "_decor", "_link-effect"
+@import "_color", "_menu", "_modal", "_style-slick-slider", "_decor", "_link-effect"
 
 
 
@@ -74,7 +74,7 @@ p
 .block-card
   margin: 0 0 123px 56px
   @media screen and ( max-width: 992px)
-    margin: 0 0 45px
+    margin: 0 0 25px
 .col-1 
   width: 100%
 .col-2 
@@ -230,6 +230,7 @@ p
 
 //НАЧАЛО: Секция "Услуги" ===================
 .sec-services
+  padding-top: 30px 
   padding-bottom: calc( 73px + 77 * ((100vw - 320px) / (1600 - 320)) )
   &:before 
     content: ' '
@@ -283,6 +284,7 @@ p
 
 //НАЧАЛО: Секция "Гарантии" ===================
 .sec-voucher 
+  padding-top: 30px 
   padding-bottom: calc( 73px + 217 * ((100vw - 320px) / (1600 - 320)) )
   position: relative
   @media screen and ( max-width: 992px )
@@ -324,6 +326,7 @@ p
 .sec-reviews,
 .sec-about-us
   font-family: 'Montserrat-Bold', sans-serif
+  padding: 30px 0 57px 0
   p 
     // font-size: 22px
     min-height: 80px
@@ -391,6 +394,8 @@ p
   position: relative
   padding: 200px 0 50px 
   overflow: hidden
+  @media screen and ( max-width: 992px )
+    padding: 30px 0 50px 
   &:before
     content: ' '
     position: absolute
@@ -404,22 +409,26 @@ p
     @media screen and ( max-width: 992px )
       border-radius: 0
       width: 100%
-      height: 300px
-      top: 154px
+      height: 252px
+      top: 0
       left: 0
   .col-2 
     position: relative
     h2 
       padding: 0 0 75px 
+      @media screen and ( max-width: 640px )
+        padding: 0 0 42px 
     .link-brief
       padding: 254px 0 0 0
       color: $color-white
       p 
         padding-bottom: 12px
+        @media screen and ( max-width: 640px )
+          padding-bottom: 25px
       h2 
         font-size: calc(26px + 38 * ((100vw - 320px) / (1600 - 320)))
       @media screen and ( max-width: 992px )
-        padding: 0 0 100px 0
+        padding: 0 0 70px 0
         
 
   

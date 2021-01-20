@@ -107,6 +107,12 @@ $(document).on( "ready", function(){
   });
 
 
+  // Открытие модального окна
+  $(".link__btn").on("click", function () {
+    $(".modal").toggleClass("active-modal")
+  });
+
+
 
 
 

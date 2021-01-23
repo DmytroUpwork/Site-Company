@@ -18,6 +18,19 @@
       position: absolute
       top: -10px
       right: -9px
+      &:after,
+      &:before      
+        content: ' '
+        display: block
+        width: 11px
+        height: 2px
+        background: #000   
+        position: absolute
+        left: 4px     
+      &:after,
+        transform: rotate(45deg)
+      &:before 
+        transform: rotate(-45deg)
     a
       width: 100%
       &:not(:last-child) 

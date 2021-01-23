@@ -1,22 +1,38 @@
-.modal
-  display: none
-
-  position: fixed
-  top: 34%
-  left: 35%
-  z-index: 9999999
-  width: 400px
-  background: $color-white
-  border-radius: 19px
-  box-shadow: 9px 12px 40px #93C0D1
-  padding: 20px
-  text-align: center
-  a
-    width: 100%
-    &:not(:last-child) 
-      margin-bottom: 30px
-
-
+.modal-wrapper
+  display: none 
+  .modal-wrapper__cont
+    width: 400px
+    background: $color-white
+    border-radius: 19px
+    box-shadow: 9px 12px 40px #93C0D1
+    padding: 20px
+    text-align: center
+    position: relative
+    .modal-wrapper__close
+      display: block
+      border: none
+      border-radius: 50%
+      width: 20px
+      height: 20px
+      background: red
+      position: absolute
+      top: -10px
+      right: -9px
+    a
+      width: 100%
+      &:not(:last-child) 
+        margin-bottom: 30px
 
 .active-modal
-  display: block
+  +d-flex-center-ai-center
+  position: fixed
+  background: #0f0e0ebd
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  z-index: 9999999
+
+
+.fixed 
+  overflow: hidden

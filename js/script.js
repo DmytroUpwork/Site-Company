@@ -108,9 +108,23 @@ $(document).on( "ready", function(){
 
 
   // Открытие модального окна
-  $(".link__btn").on("click", function () {
-    $(".modal").toggleClass("active-modal")
-  });
+  function btn_modal() {
+    
+    $(".link__btn").on("click", function () {
+      $(".modal-wrapper").addClass("active-modal");
+      $("body").addClass("fixed");
+    });
+    $(".modal-wrapper__close").on("click", function () {
+      $(".modal-wrapper").removeClass("active-modal");
+      $("body").removeClass("fixed");
+    });
+    
+    
+  };
+  btn_modal();
+  
+
+  
 
 
 

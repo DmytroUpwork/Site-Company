@@ -1,14 +1,17 @@
 .modal-wrapper
   display: none 
-  .modal-wrapper__cont
-    width: 400px
+  .m-w__body
+    max-width: 600px
+    max-height: 400px
+    
     background: $color-white
+    color: $color-black
     border-radius: 19px
     box-shadow: 9px 12px 40px #93C0D1
     padding: 20px
     text-align: center
     position: relative
-    .modal-wrapper__close
+    .m-w__close
       display: block
       border: none
       border-radius: 50%
@@ -31,10 +34,10 @@
         transform: rotate(45deg)
       &:before 
         transform: rotate(-45deg)
-    a
-      width: 100%
-      &:not(:last-child) 
-        margin-bottom: 30px
+    // a
+    //   width: 100%
+    //   &:not(:last-child) 
+    //     margin-bottom: 30px
 
 .active-modal
   +d-flex-center-ai-center
@@ -47,5 +50,5 @@
   z-index: 9999999
 
 
-.fixed 
-  overflow: hidden
+// .fixed 
+//   overflow: hidden

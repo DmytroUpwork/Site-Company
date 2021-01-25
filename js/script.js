@@ -1,13 +1,10 @@
 $(document).on( "ready", function(){
-  // Смена цвета иконок бокового меню при скролле 
-  
-  $(window).on("scroll", function () {
+  // Смена цвета иконок бокового меню при скролле
 
+  $(window).on("scroll", function () {
     var winScrollTop = $(this).scrollTop();
     function colorMenu() {
-
       if (window.innerWidth > 992) {
-
         var target1 = $(".blue-circle-voucher");
         var target2 = $(".sec-form");
         var targetPos1 = target1.offset().top;
@@ -31,13 +28,7 @@ $(document).on( "ready", function(){
           $(".navbar-toggler span").removeClass("active-color");
           $(".decor-line").attr("class", "decor-line");
         }
-
-
       }
-
-      
-
-
     }
 
     function butMenuHideShow() {
@@ -51,7 +42,7 @@ $(document).on( "ready", function(){
         $(".navbar-toggler span").attr("class", "");
       }
     }
-    
+
     function onScroll() {
       var top = window.pageYOffset;
       if (scroll < top) {
@@ -67,7 +58,7 @@ $(document).on( "ready", function(){
     butMenuHideShow();
     onScroll();
   });
-  
+
   // Код закрытия и открытия меню при нажатии на элемент + его скрытие при клике на документ
   function menuHideShow() {
     $(".navbar-toggler").click(function (e) {
@@ -77,7 +68,10 @@ $(document).on( "ready", function(){
         $menu_toggle.addClass("menu-collapse-active");
         var firstClick = true;
         $(document).bind("click.myEvent", function (e) {
-          if (!firstClick && $(e.target).closest(".menu-collapse").length == 0) {
+          if (
+            !firstClick &&
+            $(e.target).closest(".menu-collapse").length == 0
+          ) {
             $menu_toggle.removeClass("menu-collapse-active");
             $(".navbar-toggler").removeClass("navbar-toggler-active");
             $(document).unbind("click.myEvent");
@@ -88,49 +82,61 @@ $(document).on( "ready", function(){
           $menu_toggle.removeClass("menu-collapse-active");
           $(".navbar-toggler").removeClass("navbar-toggler-active");
           $(document).unbind("click.myEvent");
-        })
+        });
       }
       e.preventDefault();
     });
-  };
+  }
   menuHideShow();
 
-
   // Плавная прокрутка якорей
-  $("a[href*='#']").on("click", function(e){
+  $("a[href*='#']").on("click", function (e) {
     var anchor = $(this);
-    $('html, body').stop().animate({
-        scrollTop: $(anchor.attr('href')).offset().top
-    }, 777);
+    $("html, body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $(anchor.attr("href")).offset().top,
+        },
+        777
+      );
     e.preventDefault();
     return false;
   });
 
+  // Меню для скачивания брифа
+  function menu_brief() {
+    $(".menu-brief").on("click", function () {
+      $(this).addClass("active-menu-brief");
+      $(".menu-brief__close").addClass("menu-brief__close-active");
+      setTimeout(function () {
+        $(".menu-brief__list").addClass("active-menu-brief__list");
+      }, 700);
+    });
+    $(".menu-brief__close").on("click", function () {
+      $(this).removeClass("menu-brief__close-active");
+      $(".menu-brief").removeClass("active-menu-brief");
+      $(".menu-brief__list").removeClass("active-menu-brief__list");
+    });
+  };
+  menu_brief();
 
   // Открытие модального окна
   function btn_modal() {
-    
-    $(".link__btn").on("click", function () {
+    $(".link__btn-brief").on("click", function () {
       $(".modal-wrapper").addClass("active-modal");
-      $("body").addClass("fixed");
     });
-    $(".modal-wrapper__close").on("click", function () {
+    $(".m-w__close").on("click", function () {
       $(".modal-wrapper").removeClass("active-modal");
-      $("body").removeClass("fixed");
     });
-    
-    
   };
   btn_modal();
-  
-
-  
 
 
 
 
 
-  
+
   // Слайдер
   $(".center").slick({
     centerMode: true,
@@ -150,6 +156,5 @@ $(document).on( "ready", function(){
       },
     ],
   });
-
 });
 

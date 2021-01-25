@@ -56,6 +56,8 @@ p
   font-size: calc(14px + 7 * ((100vw - 320px) / (1600 - 320)))
 .row 
   flex-wrap: wrap
+.d-block
+  display: block
 .d-flex 
   display: flex
 .jc-center 
@@ -74,11 +76,29 @@ p
   margin: 0 0 123px 56px
   @media screen and ( max-width: 992px)
     margin: 0 0 25px
+.t-end
+  text-align: end
+.t-start
+  text-align: start
 .col-1 
   width: 100%
 .col-2 
   flex: 0 0 50%
   max-width: 50%
+  padding: 0 15px
+  @media screen and ( max-width: 992px )
+    flex: 0 0 100%
+    max-width: 100%
+.col-9
+  flex: 0 0 70%
+  max-width: 70%
+  padding: 0 15px
+  @media screen and ( max-width: 992px )
+    flex: 0 0 100%
+    max-width: 100%
+.col-3
+  flex: 0 0 30%
+  max-width: 30%
   padding: 0 15px
   @media screen and ( max-width: 992px )
     flex: 0 0 100%

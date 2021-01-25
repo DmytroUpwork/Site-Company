@@ -1,8 +1,8 @@
 .modal-wrapper
   display: none 
   .m-w__body
-    max-width: 600px
-    max-height: 400px
+    max-width: 1290px
+    // max-height: 400px
     
     background: $color-white
     color: $color-black
@@ -34,10 +34,38 @@
         transform: rotate(45deg)
       &:before 
         transform: rotate(-45deg)
-    // a
-    //   width: 100%
-    //   &:not(:last-child) 
-    //     margin-bottom: 30px
+
+
+    .m-w__body-header
+      max-width: 70%
+      text-align: left
+      h3 
+        font-weight: bold
+        font-size: 36px
+
+    .m-w__content
+      max-width: 70%
+      text-align: left
+      span 
+        color: #18eae0
+      p 
+        font-weight: bold
+    
+    .m-w__footer
+      .btn-contact-us
+        margin-bottom: 20px
+
+
+
+
+
+
+
+
+
+
+
+
 
 .active-modal
   +d-flex-center-ai-center
@@ -48,7 +76,3 @@
   top: 0
   left: 0
   z-index: 9999999
-
-
-// .fixed 
-//   overflow: hidden

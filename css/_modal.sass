@@ -1,9 +1,9 @@
 .modal-wrapper
   display: none 
   .m-w__body
-    max-width: 1290px
-    // max-height: 400px
-    
+    width: calc(100% - 320px)
+    height: 500px
+    // overflow: scroll
     background: $color-white
     color: $color-black
     border-radius: 19px
@@ -11,61 +11,60 @@
     padding: 20px
     text-align: center
     position: relative
-    .m-w__close
-      display: block
-      border: none
-      border-radius: 50%
-      width: 20px
-      height: 20px
-      background: red
-      position: absolute
-      top: -10px
-      right: -9px
-      &:after,
-      &:before      
-        content: ' '
+    @media screen and ( max-width: 768px )
+      width: calc(100% - 20px)
+    .m-w__body-wrapper
+      // overflow-y: scroll
+      // overflow-x: hidden
+      overflow: scroll
+      height: 100%
+      .m-w__close
         display: block
-        width: 11px
-        height: 2px
-        background: #000   
+        border: none
+        border-radius: 50%
+        width: 30px
+        height: 30px
+        background: #93C0D1
         position: absolute
-        left: 4px     
-      &:after,
-        transform: rotate(45deg)
-      &:before 
-        transform: rotate(-45deg)
+        top: -10px
+        right: -9px
+        &:after,
+        &:before      
+          content: ' '
+          display: block
+          width: 18px
+          height: 2px
+          background: $color-white  
+          position: absolute
+          left: 0
+          right: 0
+          bottom: 0
+          top: 0
+          margin: auto    
+        &:after,
+          transform: rotate(45deg)
+        &:before 
+          transform: rotate(-45deg)
 
 
-    .m-w__body-header
-      max-width: 70%
-      text-align: left
-      h3 
-        font-weight: bold
-        font-size: 36px
+      .m-w__body-header
+        max-width: 70%
+        text-align: left
+        h3 
+          font-weight: bold
+          font-size: 36px
 
-    .m-w__content
-      max-width: 70%
-      text-align: left
-      span 
-        color: #18eae0
-      p 
-        font-weight: bold
-    
-    .m-w__footer
-      .btn-contact-us
-        margin-bottom: 20px
-
-
-
-
-
-
-
-
-
-
-
-
+      .m-w__content
+        max-width: 70%
+        text-align: left
+        span 
+          color: #18eae0
+        p 
+          font-weight: bold
+      
+      .m-w__footer
+        .btn-contact-us
+          margin-bottom: 20px
 
 .active-modal
   +d-flex-center-ai-center
@@ -76,3 +75,73 @@
   top: 0
   left: 0
   z-index: 9999999
+  
+  
+
+
+
+
+
+
+
+
+.dropdown 
+  position: relative
+  .dropbtn 
+    +d-flex-sb-ai-center
+    border: none
+    background: transparent
+    &:focus
+      outline: none
+    span
+      display: block
+      border: none
+      border-radius: 50%
+      background: #93C0D1
+      width: 30px
+      height: 30px
+      position: relative
+      margin-right: 15px
+      transition: .2s
+      &:after,
+      &:before      
+        content: ' '
+        display: block
+        width: 18px
+        height: 2px
+        background: $color-white  
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        margin: auto  
+      &:after,
+        transform: rotate(0deg)
+      &:before 
+        transform: rotate(90deg)
+  .dropbtn-active 
+    span
+      transform: rotate(45deg)
+        
+
+  .dropdown-content 
+    display: none   
+  .dropdown-content-active
+    +d-flex-sb-column
+    animation-name: opacity-show
+    animation-duration: 1s
+    position: absolute
+    >div
+      text-align: start
+      margin-top: 20px
+      cursor: pointer
+  @keyframes opacity-show
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+      
+
+
+

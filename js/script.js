@@ -132,10 +132,14 @@ $(document).on( "ready", function(){
   };
   btn_modal();
 
-
-
-
-
+  // Выпадающий список в форме модального окна
+  function btn_dropdown() {
+    $(".dropbtn").on("click", function () {
+      $(this).toggleClass("dropbtn-active");
+      $(".dropdown-content").toggleClass("dropdown-content-active");
+    });
+  };
+  btn_dropdown();
 
   // Слайдер
   $(".center").slick({

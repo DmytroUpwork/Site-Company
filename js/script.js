@@ -202,7 +202,6 @@ $(document).on( "ready", function(){
 
 
   // Скролл кнопка
-
   function scrollBtn() {
     var btn = $(".button_scroll");
     $(window).scroll(function () {
@@ -219,6 +218,41 @@ $(document).on( "ready", function(){
   };
 
   scrollBtn();
+
+
+
+  // // menu_fixed скрипт закреплённого меню
+
+  // function menu_fixed() {
+
+  //   var h_hght = 115; // высота шапки
+  //   var h_mrg = 0; // отступ когда шапка уже не видна
+
+  //   $(function () {
+  //     var elem = $(header);
+  //     var top = $(this).scrollTop();
+
+  //     if (top > h_hght) {
+  //       elem.css("top", h_mrg);
+  //     }
+
+  //     $(window).scroll(function () {
+  //       top = $(this).scrollTop();
+
+  //       if (top + h_mrg < h_hght) {
+  //         elem.css("top", h_hght - top);
+  //       } else {
+  //         elem.css("top", h_mrg);
+  //       }
+  //     });
+  //   });
+  // };
+
+  // menu_fixed();
+
+	
+	                 
+	
 
 
   

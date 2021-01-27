@@ -149,8 +149,9 @@ p
     
 .container-form 
   width: calc(320px + 1100 * ((100vw - 320px) / (1600 - 320)))
-  margin: 0 67px 0 auto
-  @media screen and ( max-width: 635px )
+  // margin: 0 67px 0 auto
+  margin: 0 auto 0 55px
+  @media screen and ( max-width: 992px )
     margin: 0 auto
 .container-footer
   width: calc(290px + 1100 * ((100vw - 320px) / (1600 - 320)))
@@ -163,7 +164,7 @@ p
   display: none
   width: 40px
   height: 40px
-  background: $color-pink
+  background: #eb00898c
   border-radius: 50% 
   position: fixed
   bottom: 70px
@@ -284,7 +285,7 @@ p
 
 //НАЧАЛО: Секция "Услуги" ===================
 .sec-services
-  padding-top: 30px 
+  padding-top: 65px 
   padding-bottom: calc( 73px + 77 * ((100vw - 320px) / (1600 - 320)) )
   &:before 
     content: ' '
@@ -339,7 +340,7 @@ p
 
 //НАЧАЛО: Секция "Гарантии" ===================
 .sec-voucher 
-  padding-top: 30px 
+  padding-top: 65px 
   padding-bottom: calc( 73px + 217 * ((100vw - 320px) / (1600 - 320)) )
   position: relative
   @media screen and ( max-width: 992px )
@@ -381,7 +382,7 @@ p
 .sec-reviews,
 .sec-about-us
   font-family: 'Montserrat-Bold', sans-serif
-  padding: 30px 0 57px 0
+  padding: 65px 0 57px 0
   p 
     // font-size: 22px
     min-height: 80px
@@ -470,6 +471,8 @@ p
     height: calc(670px + 350 * ((100vw - 993px) / (1600 - 993)))
     left: -232px
     top: 142px
+    @media screen and ( min-width: 1440px )
+      left: -332px
     @media screen and ( max-width: 992px )
       border-radius: 0
       width: 100%

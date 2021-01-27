@@ -45,7 +45,7 @@
 }
 
 .navbar .collapse .navbar-nav .nav-item {
-  margin-right: 32px;
+  margin-right: 19px;
 }
 
 .navbar .collapse .navbar-nav .nav-item .nav-link {
@@ -1400,10 +1400,10 @@ p {
 
 .container-form {
   width: calc(320px + 1100 * ((100vw - 320px) / (1600 - 320)));
-  margin: 0 67px 0 auto;
+  margin: 0 auto 0 55px;
 }
 
-@media screen and (max-width: 635px) {
+@media screen and (max-width: 992px) {
   .container-form {
     margin: 0 auto;
   }
@@ -1418,7 +1418,7 @@ p {
   display: none;
   width: 40px;
   height: 40px;
-  background: #EB0089;
+  background: #eb00898c;
   border-radius: 50%;
   position: fixed;
   bottom: 70px;
@@ -1603,7 +1603,7 @@ p {
 }
 
 .sec-services {
-  padding-top: 30px;
+  padding-top: 65px;
   padding-bottom: calc( 73px + 77 * ((100vw - 320px) / (1600 - 320)));
 }
 
@@ -1700,7 +1700,7 @@ p {
 }
 
 .sec-voucher {
-  padding-top: 30px;
+  padding-top: 65px;
   padding-bottom: calc( 73px + 217 * ((100vw - 320px) / (1600 - 320)));
   position: relative;
 }
@@ -1758,7 +1758,7 @@ p {
 .sec-reviews,
 .sec-about-us {
   font-family: 'Montserrat-Bold', sans-serif;
-  padding: 30px 0 57px 0;
+  padding: 65px 0 57px 0;
 }
 
 .sec-reviews p,
@@ -1900,6 +1900,12 @@ p {
   height: calc(670px + 350 * ((100vw - 993px) / (1600 - 993)));
   left: -232px;
   top: 142px;
+}
+
+@media screen and (min-width: 1440px) {
+  .sec-form:before {
+    left: -332px;
+  }
 }
 
 @media screen and (max-width: 992px) {

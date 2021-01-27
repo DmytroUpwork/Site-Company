@@ -141,6 +141,78 @@ $(document).on( "ready", function(){
   };
   btn_dropdown();
 
+
+
+
+
+
+  // Динамика модального окна
+
+  function text_modal_dynamic() {
+
+    $("#des_gn_site").on("click", function () {
+      $("#title_form").find("h3").remove();
+      $("#title_form").append("<h3> Веб-дизайн сайта </h3>");
+
+      $("#link_mod_brief").find("a").remove();
+      $("#link_mod_brief").append('<a href="https://drive.google.com/file/d/1qi4cEAH4lthkLhSKLgMGndTsDgTauoUP/view?usp=sharing" ' + 
+      ' target="_blank" class="link__btn link__btn-brief" id="link-b">' + 
+      ' <span class="btn-fone"></span> Скачать бриф </a>');
+
+      $("#offer_modal").find("p").remove();
+      $("#offer_modal").append('<p> Осуществляем грамотный подход по созданию веб дизайна сайтов, что в конечном итоге даст ' +
+      ' Вам мощный инструмент для получения устойчивого конкурентного преимущества.</p>');
+
+
+    });
+
+    $("#dev_nt_site").on("click", function () {
+      $("#title_form").find("h3").remove();
+      $("#title_form").append("<h3> Верстка сайта </h3>");
+
+      $("#link_mod_brief").find("a").remove();
+      $("#link_mod_brief").append('<a href="https://drive.google.com/file/d/12OYCPj8JHVx_i0XHblmq7-subza7m1r2/view?usp=sharing"' + 
+      ' target="_blank" class="link__btn link__btn-brief" id="link-b">' + 
+      ' <span class="btn-fone"></span> Скачать бриф </a>');
+
+      $("#offer_modal").find("p").remove();
+      $("#offer_modal").append('<p> Осуществляем грамотный подход по разработке веб сайтов, что в конечном итоге даст ' +
+      ' Вам мощный инструмент для получения устойчивого конкурентного преимущества.</p>');
+
+    });
+
+    $("#logo_site").on("click", function () {
+      $("#title_form").find("h3").remove();
+      $("#title_form").append("<h3> Разработка логотипа </h3>");
+
+      $("#link_mod_brief").find("a").remove();
+      $("#link_mod_brief").append('<a href="https://drive.google.com/file/d/1rlVg3pcshIKEz6cY3--kNz3yAW2w712W/view?usp=sharing"' + 
+      ' target="_blank" class="link__btn link__btn-brief" id="link-b">' + 
+      ' <span class="btn-fone"></span> Скачать бриф </a>');
+
+      $("#offer_modal").find("p").remove();
+      $("#offer_modal").append('<p> Осуществляем грамотный подход по созданию логотипов для вашего бизнеса, что повысит узнаваемость вашего бренда.</p>');
+
+
+    });
+    
+  };
+
+  text_modal_dynamic();
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
   // Слайдер
   $(".center").slick({
     centerMode: true,

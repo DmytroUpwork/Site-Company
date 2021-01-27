@@ -439,19 +439,19 @@
                   <span class="btn-fone span_toggle">Скачать бриф</span>
                   <ul class="menu-brief__list">
                     <li>
-                      <button class="link__btn link__btn-brief">
+                      <button class="link__btn link__btn-brief" id="des_gn_site">
                         <span class="btn-fone"></span> 
                           Бриф на дизайн сайта 
                       </button>
                     </li>
                     <li>
-                      <button class="link__btn link__btn-brief">
+                      <button class="link__btn link__btn-brief" id="dev_nt_site">
                         <span class="btn-fone"></span> 
                           Бриф на разаработку сайта  
                       </button>
                     </li>
                     <li>
-                      <button class="link__btn link__btn-brief">
+                      <button class="link__btn link__btn-brief" id="logo_site">
                         <span class="btn-fone"></span> 
                           Бриф на разаработку логотипа 
                       </button>
@@ -530,32 +530,29 @@
 
     <div class="modal-wrapper">
       <div class="m-w__body">
-
         <div class="m-w__body-wrapper">
-
-
           <button class="m-w__close"></button>
         <div class="m-w__body-header">
           <div class="row d-flex">
-            <div class="col-2">
-              <h3>Веб-дизайн сайта</h3>
+            <div class="col-2" id="title_form">
+
+              <!-- Динамическая вставка h3 -->
+
             </div>
-            <div class="col-2 t-end">
-              <a href="https://drive.google.com/file/d/1qi4cEAH4lthkLhSKLgMGndTsDgTauoUP/view?usp=sharing" target="_blank" class="link__btn link__btn-brief" id="link-b">
-                <span class="btn-fone"></span> 
-                Скачать бриф
-              </a>
+            <div class="col-2 t-end" id="link_mod_brief">
+
+              <!-- Динамическая вставка ссылки на бриф -->
+
             </div>
           </div>
         </div>
-        <div class="m-w__content">
+        <div class="m-w__content" id="offer_modal">
           <span>
             Продолжительность варьируется · Цена может отличаться
           </span>
-          <p>
-            Осуществляем грамотный подход по созданию веб дизайна сайтов, что в конечном итоге даст 
-            Вам мощный инструмент для получения устойчивого конкурентного преимущества.
-          </p>
+            
+          <!-- Динамическая вставка текста -->
+          
         </div>
         <div class="m-w__footer">
           <form action="#!">
@@ -616,9 +613,11 @@
                     <div class="dropdown">
                       <button class="dropbtn"><span></span>Добавить услугу</button>
                       <div class="dropdown-content">
+
                         <div>Веб-дизайн сайта</div>
                         <div>Верстка сайта</div>
                         <div>Разаработка лого</div>
+
                       </div>
                     </div>
                   </div>

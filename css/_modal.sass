@@ -2,7 +2,7 @@
   display: none 
   .m-w__body
     width: calc(100% - 320px)
-    height: 500px
+    
     // overflow: scroll
     background: $color-white
     color: $color-black
@@ -11,13 +11,16 @@
     padding: 20px
     text-align: center
     position: relative
-    @media screen and ( max-width: 768px )
+    @media screen and ( max-width: 1120px )
       width: calc(100% - 20px)
+      height: 500px
     .m-w__body-wrapper
       // overflow-y: scroll
       // overflow-x: hidden
-      overflow: scroll
+      // overflow: scroll
       height: 100%
+      @media screen and ( max-width: 1120px )
+        overflow: scroll
       .m-w__close
         display: block
         border: none

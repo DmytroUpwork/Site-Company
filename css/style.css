@@ -483,7 +483,6 @@
 
 .modal-wrapper .m-w__body {
   width: calc(100% - 320px);
-  height: 500px;
   background: #fff;
   color: #000;
   border-radius: 19px;
@@ -494,15 +493,21 @@
   position: relative;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1120px) {
   .modal-wrapper .m-w__body {
     width: calc(100% - 20px);
+    height: 500px;
   }
 }
 
 .modal-wrapper .m-w__body .m-w__body-wrapper {
-  overflow: scroll;
   height: 100%;
+}
+
+@media screen and (max-width: 1120px) {
+  .modal-wrapper .m-w__body .m-w__body-wrapper {
+    overflow: scroll;
+  }
 }
 
 .modal-wrapper .m-w__body .m-w__body-wrapper .m-w__close {

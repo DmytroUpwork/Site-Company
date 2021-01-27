@@ -3,17 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
     <link rel="stylesheet" href="./css/sprite.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./libs/slick-carousel/slick.css">
     <link rel="stylesheet" href="./libs/slick-carousel/slick-theme.css">
     <link rel="stylesheet" href="./css/style.css">
-
     <title>Site Company</title>
   </head>
   <body>
-
     <!--НАЧАЛО: Фиксированное боковое меню ==================== -->
     <div class="menu-fixed">
       <button class="navbar-toggler t-navbar-toggler">
@@ -38,25 +35,25 @@
       </div>
       <div class="decor-line"></div>
     </div>
-
     <div class="menu-collapse">
       <nav class="navbar navbar-collapse">
         <div class="navbar-header">
           <div class="logo">
-            <svg class="icon logo-company">
-              <use xlink:href="img/sprite.svg#logo-best-site"></use>
-            </svg>
+            <a href="/index.html">
+              <svg class="icon logo-company">
+                <use xlink:href="img/sprite.svg#logo-best-site"></use>
+              </svg>
+            </a>
           </div>
           <div class="phone-link">
             <a href="tel:+380985209620" class="phone-link__tel phone-link__tel-menu">+380 985 209 620</a>
             <a href="#!" class="link__btn link__btn-project"><span class="btn-fone"></span> Начать проект </a>
           </div>
         </div>
-        
         <div class="collapse">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Все проекты</a>
+              <a class="nav-link" href="/our-project.html">Все проекты</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#sec-serv">Услуги</a>
@@ -69,17 +66,12 @@
             </li>
           </ul>
         </div>
-        
       </nav>
     </div>
-
-
     <!--КОНЕЦ: Фиксированное боковое меню ==================== -->
 
     <!-- НАЧАЛО: Кнопка скролла возврата -->
-
     <div class="button_scroll"></div>
-
     <!-- КОНЕЦ: Кнопка скролла возврата -->
     
     <!--НАЧАЛО: Главная ==================== -->
@@ -93,7 +85,7 @@
             <div class="collapse collapse-desktop">
               <ul class="navbar-nav d-flex">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Все проекты</a>
+                  <a class="nav-link" href="/our-project.html">Все проекты</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#sec-serv">Услуги</a>
@@ -107,9 +99,11 @@
               </ul>
             </div>
             <div class="logo">
-              <svg class="icon logo-company">
-                <use xlink:href="img/sprite.svg#logo-best-site"></use>
-              </svg>
+              <a href="/index.html">
+                <svg class="icon logo-company">
+                  <use xlink:href="img/sprite.svg#logo-best-site"></use>
+                </svg>
+              </a>
             </div>
             <div class="phone-link phone-link-desk">
               <a href="tel:+380985209620" class="phone-link__tel">+380 985 209 620</a>
@@ -211,7 +205,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
     <!--КОНЕЦ: Секция услуги, карточки ==================== -->
@@ -275,8 +268,6 @@
                 <span>Вёрстка сайта</span>
                 <span>Веб-дизай сайта</span>
                 <span>CMS WordPress</span>
-                <span>Хостинг</span>
-                <span>Перенос домена</span>
               </div>
             </div>
             <p>
@@ -465,15 +456,8 @@
                   </ul>
                 </div>
               </div>
-              <!-- <a href="https://drive.google.com/file/d/1qi4cEAH4lthkLhSKLgMGndTsDgTauoUP/view?usp=sharing" target="_blank" class="link__btn link__btn-brief" id="link-b">
-                    <span class="btn-fone"></span> Бриф на дизайн сайта </a>
-                  <a href="https://drive.google.com/file/d/12OYCPj8JHVx_i0XHblmq7-subza7m1r2/view?usp=sharing" target="_blank" class="link__btn link__btn-brief" id="link-b">
-                    <span class="btn-fone"></span> Бриф на разаработку сайта </a>
-                  <a href="https://drive.google.com/file/d/1rlVg3pcshIKEz6cY3--kNz3yAW2w712W/view?usp=sharing" target="_blank" class="link__btn link__btn-brief" id="link-b">
-                    <span class="btn-fone"></span> Бриф на разаработку логотипа </a> -->
             </div>
           </div>
-
           <div class="col-2">
             <div class="decor-t decor-t-2 decor-t-22"></div>
             <h2> Начните свой лучший опыт сотрудничества </h2>
@@ -532,133 +516,115 @@
       </div>
     </section>
     <!--КОНЕЦ: Секция с формой ==================== -->
-
-
+    
+    <!--НАЧАЛО: Модальное окно ==================== -->
     <div class="modal-wrapper">
       <div class="m-w__body">
         <div class="m-w__body-wrapper">
           <button class="m-w__close"></button>
-        <div class="m-w__body-header">
-          <div class="row d-flex">
-            <div class="col-2" id="title_form">
-
-              <!-- Динамическая вставка h3 -->
-
-            </div>
-            <div class="col-2 t-end" id="link_mod_brief">
-
-              <!-- Динамическая вставка ссылки на бриф -->
-
+          <div class="m-w__body-header">
+            <div class="row d-flex">
+              <div class="col-2" id="title_form">
+                <!-- Динамическая вставка h3 -->
+              </div>
+              <div class="col-2 t-end" id="link_mod_brief">
+                <!-- Динамическая вставка ссылки на бриф -->
+              </div>
             </div>
           </div>
-        </div>
-        <div class="m-w__content" id="offer_modal">
-          <span>
-            Продолжительность варьируется · Цена может отличаться
-          </span>
-            
-          <!-- Динамическая вставка текста -->
-          
-        </div>
-        <div class="m-w__footer">
-          <form action="#!">
-            <div class="row d-flex">
-              <div class="col-9">
-                <div class="row form-row d-flex">
-                  <div class="col-2 d-flex ai-end">
-                    <input type="text" class="form-control" placeholder="Имя">
+          <div class="m-w__content" id="offer_modal">
+            <span>
+              Продолжительность варьируется · Цена может отличаться
+            </span>
+              <!-- Динамическая вставка текста -->
+          </div>
+          <div class="m-w__footer">
+            <form action="#!">
+              <div class="row d-flex">
+                <div class="col-9">
+                  <div class="row form-row d-flex">
+                    <div class="col-2 d-flex ai-end">
+                      <input type="text" class="form-control" placeholder="Имя">
+                    </div>
+                    <div class="col-2 d-flex ai-end">
+                      <input type="text" class="form-control" placeholder="Телефон">
+                    </div>
                   </div>
-                  <div class="col-2 d-flex ai-end">
-                    <input type="text" class="form-control" placeholder="Телефон">
-                  </div>
-                </div>
-                <div class="row form-row d-flex">
-                  <div class="col-2 d-flex ai-end">
-                    <input type="email" class="form-control" placeholder="Email">
-                  </div>
-                  <div class="col-2 d-flex ai-end input__wrapper">
-                    <input type="file" name="photo" id="input-file" multiple>
-                    <label for="input-file">
-                      <span class="input__file-icon-wrapper">
-                        <svg class="icon-card">
-                          <use xlink:href="img/sprite.svg#input-file"></use>
-                        </svg>
-                      </span>
-                      <div class="input__file-button">
-                        <div class="input__file-button-text">Прикрепить файл</div>
-                        <div> до 20 гб </div>
-                      </div>
-                    </label>
-                  </div>
-                </div>
-                <div class="row form-row">
-                  <div class="col-1">
-                    <textarea class="form-control" placeholder="Введите Ваше сообщение"></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="row form-row">
-                  <div class="col-1 t-start">
-                    <button type="submit" class="btn-contact-us border-0 d-block"> <span class="btn-gradient"></span> ОТПРАВИТЬ </button>
-                    <span class="info-person">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных</span>
-                  </div>
-                </div>
-                <div class="row form-row">
-                  <div class="col-1">
-                    <div class="form-check d-flex">
-                      <input class="form-check-input" type="checkbox" id="autoSizingCheckModal" checked>
-                      <label class="form-check-label" for="autoSizingCheckModal">
-                        Запомнить меня
+                  <div class="row form-row d-flex">
+                    <div class="col-2 d-flex ai-end">
+                      <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="col-2 d-flex ai-end input__wrapper">
+                      <input type="file" name="photo" id="input-file" multiple>
+                      <label for="input-file">
+                        <span class="input__file-icon-wrapper">
+                          <svg class="icon-card">
+                            <use xlink:href="img/sprite.svg#input-file"></use>
+                          </svg>
+                        </span>
+                        <div class="input__file-button">
+                          <div class="input__file-button-text">Прикрепить файл</div>
+                          <div> до 20 гб </div>
+                        </div>
                       </label>
                     </div>
                   </div>
+                  <div class="row form-row">
+                    <div class="col-1">
+                      <textarea class="form-control" placeholder="Введите Ваше сообщение"></textarea>
+                    </div>
+                  </div>
                 </div>
-                <div class="row form-row">
-                  <div class="col-1">
-                    <div class="dropdown">
-                      <button class="dropbtn"><span></span>Добавить услугу</button>
-                      <div class="dropdown-content">
+                <div class="col-3">
+                  <div class="row form-row">
+                    <div class="col-1 t-start">
+                      <button type="submit" class="btn-contact-us border-0 d-block"> <span class="btn-gradient"></span> ОТПРАВИТЬ </button>
+                      <span class="info-person">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных</span>
+                    </div>
+                  </div>
+                  <div class="row form-row">
+                    <div class="col-1">
+                      <div class="form-check d-flex">
+                        <input class="form-check-input" type="checkbox" id="autoSizingCheckModal" checked>
+                        <label class="form-check-label" for="autoSizingCheckModal">
+                          Запомнить меня
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row form-row">
+                    <div class="col-1">
+                      <div class="dropdown">
+                        <button class="dropbtn"><span></span>Добавить услугу</button>
+                        <div class="dropdown-content">
 
-                        <div>Веб-дизайн сайта</div>
-                        <div>Верстка сайта</div>
-                        <div>Разаработка лого</div>
+                          <div>Веб-дизайн сайта</div>
+                          <div>Верстка сайта</div>
+                          <div>Разаработка лого</div>
 
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
-
-
-
-
-        </div>
-
-        
-
-
-
-
       </div>
     </div>
-
-
-
-
-
+    <!--КОНЕЦ: Модальное окно ==================== -->
     
     <footer>
       <div class="container-footer">
         <div class="row">
           <div class="col col-footer-logo d-flex jc-space-between">
             <div class="col-footer-logo__logo">
-              <svg class="icon logo-company">
-                <use xlink:href="img/sprite.svg#logo-best-site"></use>
-              </svg>
+              <a href="/index.html">
+                <svg class="icon logo-company">
+                  <use xlink:href="img/sprite.svg#logo-best-site"></use>
+                </svg>
+              </a>
             </div>
             <div class="col-footer-logo__text">
               Вы зарегистрированы
@@ -690,6 +656,7 @@
     
     <script src="./libs/jquery.2.1.3.js"></script>
     <script src="./libs/slick-carousel/slick.js"></script>
+    <script src="./js/script-scroll-p-home.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

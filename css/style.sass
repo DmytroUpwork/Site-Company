@@ -276,10 +276,15 @@ p
       height: 64px
       top: 0
       left: 0
-      border-radius: 0
-      
+      border-radius: 0      
   @media screen and ( max-width: 992px )
     background: #fb00ff52
+// Страница: Наши проекты
+.p-project
+  background: linear-gradient(119.93deg, rgba(16, 21, 125, 0.9) 5.58%, rgba(235, 0, 137, 0.9) 68.27%)
+  color: $color-white
+  &:before 
+    display: none
       
 //КОНЕЦ: Секция Главная ===================
 
@@ -584,6 +589,39 @@ form
     font-weight: 600
 .form-check-label 
   padding-left: 15px 
+
+// Секция: Выбор проектов на странице "Наши проекты" 
+.project-selection
+  padding: 160px 0 100px
+  text-align: center
+  @media screen and ( max-width: 992px )
+    width: calc( 100% - 20px )
+    margin: 0 auto
+  h2 
+    width: calc( 300px + 600 * ((100vw - 320px) / (1600 - 320)))
+    margin: 0 auto
+    margin-bottom: 140px
+    color: $color-blue
+    
+  .wrapper-select
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    // min-height: 242px
+    h3
+      transition: .2s
+      cursor: pointer
+      font-family: 'Montserrat-Bold', sans-serif
+      font-size: 14px
+      margin-bottom: 27px
+      max-width: 100%
+      &:not(:last-child)
+        margin-bottom: 57px
+      &:hover 
+        transform: scale(1.5)
+        font-weight: bold
+    
 
 
 

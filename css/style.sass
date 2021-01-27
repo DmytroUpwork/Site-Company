@@ -158,6 +158,41 @@ p
 
 // КОНЕЦ: Стили контейнеров =============
 
+// НАЧАЛО: Стили кнопки скролла ==========
+.button_scroll
+  display: none
+  width: 40px
+  height: 40px
+  background: $color-pink
+  border-radius: 50% 
+  position: fixed
+  bottom: 70px
+  right: 43px
+  z-index: 99999999
+  cursor: pointer
+  transition: .2s
+  &:hover
+    background: $color-blue
+  &:before
+    content: ' '
+    width: 12px
+    height: 12px
+    border-top: 2px solid $color-white
+    border-left: 2px solid $color-white
+    background: transparent
+    transform: rotate(45deg)
+    display: block
+    position: absolute
+    top: 5px
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+
+.show 
+  display: block
+// КОНЕЦ: Стили кнопки скролла ==========
+
 //НАЧАЛО: Карточки =====================
 .card 
   flex: 0 0 33.333%
@@ -352,16 +387,23 @@ p
     min-height: 80px
     text-indent: 10px
 .sec-about-us 
+  @media screen and ( max-width: 992px )
+    background: #fb00ff52
   h2 
     padding: 0 0 148px
+    @media screen and ( max-width: 992px )
+      padding: 0 0 30px
   h3 
     margin: 24px auto 53px
     text-align: center
-  @media screen and ( max-width: 992px )
-    background: #fb00ff52
+    @media screen and ( max-width: 992px )
+      margin-bottom: 24px
+  
 // Декорации =================
 .about-us__col-1
   position: relative
+  @media screen and ( max-width: 992px )
+    padding-bottom: 50px
   &:before 
     content: url('../img/decor-klipartz.png')
     position: absolute
@@ -546,6 +588,7 @@ form
 footer 
   padding: 73px 0 55px
   position: relative
+  overflow: hidden
   &:before 
     content: url('../img/group-img-footer.png')
     position: absolute

@@ -139,13 +139,21 @@
 .center-reviews .slick-prev:before {
     width: 20px;
     height: 20px;
-    margin: 25px auto 24px 28px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .center-about-us .slick-prev:before {
     width: 10px;
     height: 10px;
-    margin: 17px auto 17px 22px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .slick-next
@@ -196,13 +204,21 @@
 .center-reviews .slick-next:before {
     width: 20px;
     height: 20px;
-    margin: 25px auto 24px 23px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .center-about-us .slick-next:before {
     width: 10px;
     height: 10px;
-    margin: 20px auto 20px 19px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 /* Dots */

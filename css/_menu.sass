@@ -30,8 +30,27 @@
           transition: .2s
           color: $color-black
           font-weight: 600
+          position: relative
+          padding: 9px
+          &:after
+            content: ' '
+            border: 1px solid $color-pink
+            border-radius: 20px
+            position: absolute
+            width: 100%
+            left: 0px
+            top: 0
+            right: 0
+            bottom: 0
+            opacity: 0
+            transition: .3s
           &:hover 
-            color: $color-pink   
+            color: $color-pink  
+            &:after
+              opacity: 1
+            
+
+
   .collapse-desktop
     @media screen and ( max-width: 992px )
       display: none

@@ -2,8 +2,6 @@
   display: none 
   .m-w__body
     width: calc(100% - 320px)
-    
-    // overflow: scroll
     background: $color-white
     color: $color-black
     border-radius: 19px
@@ -15,9 +13,6 @@
       width: calc(100% - 20px)
       height: 500px
     .m-w__body-wrapper
-      // overflow-y: scroll
-      // overflow-x: hidden
-      // overflow: scroll
       height: 100%
       @media screen and ( max-width: 1120px )
         overflow: scroll
@@ -53,15 +48,19 @@
       .m-w__body-header
         max-width: 70%
         text-align: left
+        @media screen and ( max-width: 992px )
+          max-width: 100%
+          padding-bottom: 20px
         h3 
           font-weight: bold
-          font-size: 36px
+          font-size: calc(26px + 10 * ((100vw - 320px) / (1600 - 320)))
 
       .m-w__content
         max-width: 70%
         text-align: left
         span 
           color: #18eae0
+          
         p 
           font-weight: bold
       
@@ -134,7 +133,7 @@
     +d-flex-sb-column
     animation-name: opacity-show
     animation-duration: 1s
-    position: absolute
+    // position: absolute
     >div
       text-align: start
       margin-top: 20px
